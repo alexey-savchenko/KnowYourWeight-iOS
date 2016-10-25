@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
+    
+    var bodyCondition: Condition?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,6 +28,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+    
+    
+    
+    
+    
     
     let bodyConditions: Dictionary = ["very_underweight": "You are very severely underweight",
                                       "severely_underweight": "You are severely underweight",
@@ -56,16 +63,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if Double(calulationResult)! < 15 {
             information.text = bodyConditions["very_underweight"]
+            bodyCondition = Condition.very_underweight
         } else if Double(calulationResult)! > 15 && Double(calulationResult)! < 16{
             information.text = bodyConditions["severely_underweight"]
+            bodyCondition = Condition.severely_underweight
         } else if Double(calulationResult)! > 16 && Double(calulationResult)! < 18{
             information.text = bodyConditions["underweight"]
+            bodyCondition = Condition.underweight
         } else if Double(calulationResult)! > 18 && Double(calulationResult)! < 25{
             information.text = bodyConditions["normal"]
+            bodyCondition = Condition.normal
+
         } else if Double(calulationResult)! > 25 && Double(calulationResult)! < 30{
             information.text = bodyConditions["overweight"]
+            bodyCondition = Condition.overweight
+
         } else if Double(calulationResult)! > 30 {
             information.text = bodyConditions["obese"]
+            bodyCondition = Condition.obese
+
         }
         moreInfoBtn.isEnabled = true
     }
@@ -73,6 +89,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func calculation(weight: Double, height: Double) -> String{
         let result: Double = weight / (pow((height / 100), 2))
         return String(round(100 * result) / 100)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        
+        let newContion = bodyCondition
+        let navController = segue.destination as! UINavigationController
+        let detailedViewController = navController.topViewController as! DetailedViewController
+        
+        detailedViewController.condition = newContion
+        
     }
 }
 

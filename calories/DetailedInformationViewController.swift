@@ -11,9 +11,15 @@ import UIKit
 
 class DetailedViewController: UIViewController, UINavigationControllerDelegate{
 
+    var condition: Condition? = nil
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        if let cond = condition{
+            print("It works!")
+        }
+        
     }
     
     
