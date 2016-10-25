@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		804176601DBF78A500506B53 /* DetailedInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041765F1DBF78A500506B53 /* DetailedInformationViewController.swift */; };
 		80730BF71DBE7B1500133136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80730BF61DBE7B1500133136 /* AppDelegate.swift */; };
 		80730BF91DBE7B1500133136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80730BF81DBE7B1500133136 /* ViewController.swift */; };
 		80730BFC1DBE7B1500133136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80730BFA1DBE7B1500133136 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8041765F1DBF78A500506B53 /* DetailedInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedInformationViewController.swift; sourceTree = "<group>"; };
 		80730BF31DBE7B1500133136 /* calories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80730BF61DBE7B1500133136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80730BF81DBE7B1500133136 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				80730BF61DBE7B1500133136 /* AppDelegate.swift */,
 				80730BF81DBE7B1500133136 /* ViewController.swift */,
 				80730BFA1DBE7B1500133136 /* Main.storyboard */,
+				8041765F1DBF78A500506B53 /* DetailedInformationViewController.swift */,
 				80E8E96D1DBF2F7900942D5C /* cross.png */,
 				80730BFD1DBE7B1500133136 /* Assets.xcassets */,
 				80730BFF1DBE7B1500133136 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				80730BF91DBE7B1500133136 /* ViewController.swift in Sources */,
 				80730BF71DBE7B1500133136 /* AppDelegate.swift in Sources */,
+				804176601DBF78A500506B53 /* DetailedInformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

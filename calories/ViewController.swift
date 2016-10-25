@@ -41,9 +41,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var heightValue: UITextField!
     
     @IBOutlet weak var BMI_Value: UILabel!
-    @IBAction func endEditing(_ sender: UITextField) {
-        
-    }
+    
+    @IBOutlet weak var moreInfoBtn: UIButton!
     
     @IBAction func CalculateBMI(_ sender: AnyObject) {
         
@@ -68,9 +67,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else if Double(calulationResult)! > 30 {
             information.text = bodyConditions["obese"]
         }
-        
-        
-        
+        moreInfoBtn.isEnabled = true
     }
     
     func calculation(weight: Double, height: Double) -> String{
