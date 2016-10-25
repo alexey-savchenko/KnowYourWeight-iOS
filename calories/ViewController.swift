@@ -8,16 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.heightValue.delegate = self
+        self.weightValue.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     let bodyConditions: Dictionary = ["very_underweight": "You are very severely underweight",
@@ -34,6 +41,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var heightValue: UITextField!
     
     @IBOutlet weak var BMI_Value: UILabel!
+    @IBAction func endEditing(_ sender: UITextField) {
+        
+    }
     
     @IBAction func CalculateBMI(_ sender: AnyObject) {
         
@@ -58,6 +68,8 @@ class ViewController: UIViewController {
         } else if Double(calulationResult)! > 30 {
             information.text = bodyConditions["obese"]
         }
+        
+        
         
     }
     
