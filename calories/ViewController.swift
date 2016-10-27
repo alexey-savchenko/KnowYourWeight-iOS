@@ -29,11 +29,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    
-    
-    
-    
-    
     let bodyConditions: Dictionary = ["very_underweight": "You are very severely underweight",
                                       "severely_underweight": "You are severely underweight",
                                       "underweight": "You are underweight",
@@ -53,37 +48,42 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func CalculateBMI(_ sender: AnyObject) {
         
-        let _weight = Double(weightValue.text!)
-        
-        let _height = Double(heightValue.text!)
-        
-        let calulationResult = calculation(weight: _weight!, height: _height!)
-        
-        BMI_Value.text = calulationResult
-        
-        if Double(calulationResult)! < 15 {
-            information.text = bodyConditions["very_underweight"]
-            bodyCondition = Condition.very_underweight
-        } else if Double(calulationResult)! > 15 && Double(calulationResult)! < 16{
-            information.text = bodyConditions["severely_underweight"]
-            bodyCondition = Condition.severely_underweight
-        } else if Double(calulationResult)! > 16 && Double(calulationResult)! < 18{
-            information.text = bodyConditions["underweight"]
-            bodyCondition = Condition.underweight
-        } else if Double(calulationResult)! > 18 && Double(calulationResult)! < 25{
-            information.text = bodyConditions["normal"]
-            bodyCondition = Condition.normal
+        if let _weight = Double(weightValue.text!){
+            if let _height = Double(heightValue.text!){
+                
+                let calulationResult = calculation(weight: _weight, height: _height)
+                
+                BMI_Value.text = calulationResult
+                
+                if Double(calulationResult)! < 15 {
+                    information.text = bodyConditions["very_underweight"]
+                    bodyCondition = Condition.very_underweight
+                    
+                } else if Double(calulationResult)! > 15 && Double(calulationResult)! < 16{
+                    information.text = bodyConditions["severely_underweight"]
+                    bodyCondition = Condition.severely_underweight
+                    
+                } else if Double(calulationResult)! > 16 && Double(calulationResult)! < 18{
+                    information.text = bodyConditions["underweight"]
+                    bodyCondition = Condition.underweight
+                    
+                } else if Double(calulationResult)! > 18 && Double(calulationResult)! < 25{
+                    information.text = bodyConditions["normal"]
+                    bodyCondition = Condition.normal
+                    
+                } else if Double(calulationResult)! > 25 && Double(calulationResult)! < 30{
+                    information.text = bodyConditions["overweight"]
+                    bodyCondition = Condition.overweight
+                    
+                } else if Double(calulationResult)! > 30 {
+                    information.text = bodyConditions["obese"]
+                    bodyCondition = Condition.obese
+                }
+                
+                moreInfoBtn.isEnabled = true
 
-        } else if Double(calulationResult)! > 25 && Double(calulationResult)! < 30{
-            information.text = bodyConditions["overweight"]
-            bodyCondition = Condition.overweight
-
-        } else if Double(calulationResult)! > 30 {
-            information.text = bodyConditions["obese"]
-            bodyCondition = Condition.obese
-
+            }
         }
-        moreInfoBtn.isEnabled = true
     }
     
     func calculation(weight: Double, height: Double) -> String{

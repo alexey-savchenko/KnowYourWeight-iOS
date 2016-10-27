@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="1DS-ao-aI6">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="1DS-ao-aI6">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eY6-pn-DAA">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -50,11 +50,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross.png" translatesAutoresizingMaskIntoConstraints="NO" id="dnT-VM-zC9">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="99" id="DNP-4Q-B71"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cP-TI-lba">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="132" id="SEj-b9-k0m"/>
@@ -100,25 +95,28 @@
                                     <segue destination="cVI-87-B8f" kind="show" id="1bC-ZV-i3i"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bnf-uy-wo7"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dnT-VM-zC9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="APA-tl-OLy"/>
+                            <constraint firstItem="Bnf-uy-wo7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Arh-IE-qpE"/>
+                            <constraint firstItem="Bnf-uy-wo7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="EjZ-5A-kbM"/>
                             <constraint firstItem="1DS-ao-aI6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="210" id="Mqt-pP-HIj"/>
                             <constraint firstItem="1DS-ao-aI6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="NCO-eC-neq"/>
                             <constraint firstItem="cHl-fn-cIc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XSR-S4-eVh"/>
                             <constraint firstItem="cHl-fn-cIc" firstAttribute="top" secondItem="4cP-TI-lba" secondAttribute="bottom" constant="7" id="XnO-Q0-aIr"/>
+                            <constraint firstItem="Bnf-uy-wo7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="25" id="YN2-5o-c4e"/>
                             <constraint firstItem="J7s-gt-0sE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="550" id="arL-bn-vg1"/>
                             <constraint firstItem="GUe-Va-pZS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="biX-pJ-xZ0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1ab-se-ket" secondAttribute="trailing" constant="20" id="eAf-oa-S5Q"/>
                             <constraint firstItem="1ab-se-ket" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="eij-d9-Et0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1DS-ao-aI6" secondAttribute="trailing" constant="20" id="f2g-1l-IzI"/>
                             <constraint firstItem="4cP-TI-lba" firstAttribute="top" secondItem="GUe-Va-pZS" secondAttribute="bottom" constant="10" id="gk3-yX-RAW"/>
                             <constraint firstItem="1ab-se-ket" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h8M-PH-nvZ"/>
                             <constraint firstItem="GUe-Va-pZS" firstAttribute="top" secondItem="1DS-ao-aI6" secondAttribute="bottom" constant="40" id="j0w-0M-xdY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J7s-gt-0sE" secondAttribute="trailing" id="jzX-z4-Ihx"/>
-                            <constraint firstItem="dnT-VM-zC9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nH5-q6-y7Q"/>
                             <constraint firstItem="1ab-se-ket" firstAttribute="top" secondItem="cHl-fn-cIc" secondAttribute="bottom" constant="15" id="oot-TA-vxP"/>
-                            <constraint firstItem="dnT-VM-zC9" firstAttribute="centerX" secondItem="1DS-ao-aI6" secondAttribute="centerX" id="oyf-MK-Wzd"/>
+                            <constraint firstItem="1DS-ao-aI6" firstAttribute="top" secondItem="Bnf-uy-wo7" secondAttribute="bottom" constant="50" id="rdj-hP-rp8"/>
                             <constraint firstItem="4cP-TI-lba" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sXD-jT-lfW"/>
                         </constraints>
                     </view>
@@ -146,6 +144,12 @@
                     <view key="view" contentMode="scaleToFill" id="ZOk-hS-glx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Rt-cc-cGA">
+                                <frame key="frameInset" minX="16" minY="64" width="343" height="595"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detailed info" id="1cX-o1-XLY">

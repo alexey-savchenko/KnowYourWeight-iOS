@@ -16,7 +16,7 @@ class DetailedViewController: UIViewController, UINavigationControllerDelegate{
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        if let cond = condition{
+        if condition != nil{
             print("It works!")
         }
         
