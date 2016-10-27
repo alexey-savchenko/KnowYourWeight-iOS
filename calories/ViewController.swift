@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.heightValue.delegate = self
         self.weightValue.delegate = self
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -36,6 +36,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                       "overweight": "You are overweight",
                                       "obese": "You are obese"]
     
+    @IBOutlet weak var genderSelected: UISegmentedControl!
+    
+    @IBOutlet weak var ageSlider: UISlider!
+    @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var information: UILabel!
     
     @IBOutlet weak var weightValue: UITextField!
@@ -81,23 +85,45 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 }
                 
                 moreInfoBtn.isEnabled = true
-
+                
             }
         }
     }
     
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+//        let rounded = round(100 * sender.value) / 100
+//        let final = rounded
+        ageLabel.text = "\(Int(round(sender.value)))"
+    }
+    
+    
     func calculation(weight: Double, height: Double) -> String{
         let result: Double = weight / (pow((height / 100), 2))
-        return String(round(100 * result) / 100)
+        return String(Int(round(result)))
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         
-        let newContion = bodyCondition
-        let navController = segue.destination as! UINavigationController
-        let detailedViewController = navController.topViewController as! DetailedViewController
         
-        detailedViewController.condition = newContion
+        let newContion = bodyCondition
+        
+        var newGender: Gender
+        
+        let newBMI_Value = Double(BMI_Value.text!)
+        
+        if genderSelected.selectedSegmentIndex == 0{
+            newGender = .Male
+        } else{
+            newGender = .Female
+        }
+        
+        let newPerson = Person(_gender: newGender, _condition: newContion!, _BMI: newBMI_Value!, _age: Int(ageSlider.value))
+        
+        let navController = segue.destination as! UINavigationController
+        if let detailedViewController = navController.topViewController as! DetailedViewController?{
+            detailedViewController.person = newPerson
+        }
+        
         
     }
 }

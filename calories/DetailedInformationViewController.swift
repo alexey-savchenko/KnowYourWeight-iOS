@@ -9,17 +9,25 @@
 import Foundation
 import UIKit
 
-class DetailedViewController: UIViewController, UINavigationControllerDelegate{
-
-    var condition: Condition? = nil
+class DetailedViewController: UIViewController{
+    
+    
+    @IBOutlet weak var genderImage: UIImageView!
+    
+    var person: Person? = nil
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        if condition != nil{
-            print("It works!")
-        }
+        print("----------------------")
+        print(person?.showProps())
+        print("----------------------")
         
+        if person?.gender == Gender.Male{
+            genderImage.image = UIImage(named: "male-sign")
+        } else{
+            genderImage.image = UIImage(named: "female-sign")
+        }
     }
     
     
