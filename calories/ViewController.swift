@@ -8,17 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    var bodyCondition: Condition?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.heightValue.delegate = self
+        self.weightValue.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    
+    
+    
+    
     
     let bodyConditions: Dictionary = ["very_underweight": "You are very severely underweight",
                                       "severely_underweight": "You are severely underweight",
@@ -35,6 +49,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var BMI_Value: UILabel!
     
+    @IBOutlet weak var moreInfoBtn: UIButton!
+    
     @IBAction func CalculateBMI(_ sender: AnyObject) {
         
         let _weight = Double(weightValue.text!)
@@ -47,23 +63,42 @@ class ViewController: UIViewController {
         
         if Double(calulationResult)! < 15 {
             information.text = bodyConditions["very_underweight"]
+            bodyCondition = Condition.very_underweight
         } else if Double(calulationResult)! > 15 && Double(calulationResult)! < 16{
             information.text = bodyConditions["severely_underweight"]
+            bodyCondition = Condition.severely_underweight
         } else if Double(calulationResult)! > 16 && Double(calulationResult)! < 18{
             information.text = bodyConditions["underweight"]
+            bodyCondition = Condition.underweight
         } else if Double(calulationResult)! > 18 && Double(calulationResult)! < 25{
             information.text = bodyConditions["normal"]
+            bodyCondition = Condition.normal
+
         } else if Double(calulationResult)! > 25 && Double(calulationResult)! < 30{
             information.text = bodyConditions["overweight"]
+            bodyCondition = Condition.overweight
+
         } else if Double(calulationResult)! > 30 {
             information.text = bodyConditions["obese"]
+            bodyCondition = Condition.obese
+
         }
-        
+        moreInfoBtn.isEnabled = true
     }
     
     func calculation(weight: Double, height: Double) -> String{
         let result: Double = weight / (pow((height / 100), 2))
         return String(round(100 * result) / 100)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        
+        let newContion = bodyCondition
+        let navController = segue.destination as! UINavigationController
+        let detailedViewController = navController.topViewController as! DetailedViewController
+        
+        detailedViewController.condition = newContion
+        
     }
 }
 
