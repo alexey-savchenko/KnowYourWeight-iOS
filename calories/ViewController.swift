@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
@@ -14,14 +16,32 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         self.heightValue.delegate = self
         self.weightValue.delegate = self
+        
+        let EndPoint: String = "https://bmi.p.mashape.com/"
+        let _parameters: Parameters = [
+            "weight": ["value": 85, "unit": "kg"],
+            "height": ["value": 180, "unit": "cm"],
+            "sex": "m",
+            "age": 25
+        ]
+        let _headers: HTTPHeaders = [
+            "X-Mashape-Key": "FYXjzFgpJgmshPFR4cCXV2Do7FpOp13Kh8OjsnoQRIJkoLa6Hf",
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        ]
+        
+        //let validParams = JSONSerialization.isValidJSONObject(parameters)
+
+        Alamofire.request(EndPoint, method: .post, parameters: _parameters, encoding: JSONEncoding.default, headers: _headers).responseJSON {response in
+            print(response)
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -39,14 +59,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var genderSelected: UISegmentedControl!
     
     @IBOutlet weak var ageSlider: UISlider!
+    
     @IBOutlet weak var ageLabel: UILabel!
+    
     @IBOutlet weak var information: UILabel!
     
     @IBOutlet weak var weightValue: UITextField!
     
     @IBOutlet weak var heightValue: UITextField!
-    
-    @IBOutlet weak var BMI_Value: UILabel!
     
     @IBOutlet weak var moreInfoBtn: UIButton!
     
@@ -57,29 +77,33 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 
                 let calulationResult = calculation(weight: _weight, height: _height)
                 
-                BMI_Value.text = calulationResult
-                
-                if Double(calulationResult)! < 15 {
+                if calulationResult < 15 {
+                  
                     information.text = bodyConditions["very_underweight"]
                     bodyCondition = Condition.very_underweight
                     
-                } else if Double(calulationResult)! > 15 && Double(calulationResult)! < 16{
+                } else if calulationResult > 15 && calulationResult < 16{
+
                     information.text = bodyConditions["severely_underweight"]
                     bodyCondition = Condition.severely_underweight
                     
-                } else if Double(calulationResult)! > 16 && Double(calulationResult)! < 18{
+                } else if calulationResult > 16 && calulationResult < 18{
+
                     information.text = bodyConditions["underweight"]
                     bodyCondition = Condition.underweight
                     
-                } else if Double(calulationResult)! > 18 && Double(calulationResult)! < 25{
+                } else if calulationResult > 18 && calulationResult < 25{
+
                     information.text = bodyConditions["normal"]
                     bodyCondition = Condition.normal
                     
-                } else if Double(calulationResult)! > 25 && Double(calulationResult)! < 30{
+                } else if calulationResult > 25 && calulationResult < 30{
+                   
                     information.text = bodyConditions["overweight"]
                     bodyCondition = Condition.overweight
                     
-                } else if Double(calulationResult)! > 30 {
+                } else if calulationResult > 30 {
+                 
                     information.text = bodyConditions["obese"]
                     bodyCondition = Condition.obese
                 }
@@ -91,40 +115,43 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
-//        let rounded = round(100 * sender.value) / 100
-//        let final = rounded
         ageLabel.text = "\(Int(round(sender.value)))"
     }
     
     
-    func calculation(weight: Double, height: Double) -> String{
+    func calculation(weight: Double, height: Double) -> Int{
         let result: Double = weight / (pow((height / 100), 2))
-        return String(Int(round(result)))
+        print("frst BMI: \(result)")
+        return Int(round(result))
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         
-        
         let newContion = bodyCondition
+        
+        let newHeight = Int(heightValue.text!)!
+        
+        let newWeight = Int(weightValue.text!)!
+        
+        let newAge = Int(ageSlider.value)
         
         var newGender: Gender
         
-        let newBMI_Value = Double(BMI_Value.text!)
-        
         if genderSelected.selectedSegmentIndex == 0{
             newGender = .Male
-        } else{
+        } else {
             newGender = .Female
         }
         
-        let newPerson = Person(_gender: newGender, _condition: newContion!, _BMI: newBMI_Value!, _age: Int(ageSlider.value))
+        let newPerson = Person(_gender: newGender, _condition: newContion!, _weight: newWeight, _height: newHeight, _age: newAge)
         
         let navController = segue.destination as! UINavigationController
-        if let detailedViewController = navController.topViewController as! DetailedViewController?{
+        
+        if let detailedViewController = navController.topViewController as? DetailedViewController {
+            
             detailedViewController.person = newPerson
+        
         }
-        
-        
     }
 }
 

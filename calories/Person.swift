@@ -6,6 +6,8 @@
 //  Copyright © 2016 Alexey Savchenko. All rights reserved.
 //
 
+import Foundation
+
 enum Condition {
     case very_underweight
     case severely_underweight
@@ -15,25 +17,23 @@ enum Condition {
     case obese
 }
 
-enum Gender {
-    case Male
-    case Female
+enum Gender: String {
+    case Male = "m"
+    case Female = "f"
 }
 
 class Person {
     var condition: Condition
     var gender: Gender
-    var BMI: Double
+    var weight: Int
+    var height: Int
     var age: Int
     
-    init(_gender: Gender, _condition: Condition, _BMI: Double, _age: Int) {
+    init(_gender: Gender, _condition: Condition, _weight: Int, _height: Int, _age: Int) {
         self.gender = _gender
         self.condition = _condition
-        self.BMI = _BMI
+        self.weight = _weight
+        self.height = _height
         self.age = _age
-    }
-    
-    func showProps()-> [String]{
-        return Mirror(reflecting: self).children.flatMap {$0.label}
     }
 }
