@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    var bodyCondition: Condition?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,32 +80,32 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 if calulationResult < 15 {
                   
                     information.text = bodyConditions["very_underweight"]
-                    bodyCondition = Condition.very_underweight
+                    
                     
                 } else if calulationResult > 15 && calulationResult < 16{
 
                     information.text = bodyConditions["severely_underweight"]
-                    bodyCondition = Condition.severely_underweight
+                    
                     
                 } else if calulationResult > 16 && calulationResult < 18{
 
                     information.text = bodyConditions["underweight"]
-                    bodyCondition = Condition.underweight
+                    
                     
                 } else if calulationResult > 18 && calulationResult < 25{
 
                     information.text = bodyConditions["normal"]
-                    bodyCondition = Condition.normal
+                    
                     
                 } else if calulationResult > 25 && calulationResult < 30{
                    
                     information.text = bodyConditions["overweight"]
-                    bodyCondition = Condition.overweight
+                    
                     
                 } else if calulationResult > 30 {
                  
                     information.text = bodyConditions["obese"]
-                    bodyCondition = Condition.obese
+                    
                 }
                 
                 moreInfoBtn.isEnabled = true
@@ -127,8 +127,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         
-        let newContion = bodyCondition
-        
         let newHeight = Int(heightValue.text!)!
         
         let newWeight = Int(weightValue.text!)!
@@ -143,7 +141,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             newGender = .Female
         }
         
-        let newPerson = Person(_gender: newGender, _condition: newContion!, _weight: newWeight, _height: newHeight, _age: newAge)
+        let newPerson = Person(_gender: newGender, _weight: newWeight, _height: newHeight, _age: newAge)
         
         let navController = segue.destination as! UINavigationController
         

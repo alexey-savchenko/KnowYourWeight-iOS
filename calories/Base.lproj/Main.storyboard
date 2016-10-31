@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="1DS-ao-aI6">
@@ -142,7 +142,7 @@
                         <viewControllerLayoutGuide type="bottom" id="BOG-au-kD2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AUK-2k-UOS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
                             <userLayoutGuide location="16" affinity="minX"/>
@@ -160,7 +160,7 @@
                                     <constraint firstAttribute="height" constant="100" id="cjY-0J-NvU"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjP-0L-Cee">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjP-0L-Cee">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -170,19 +170,47 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Risk factor: " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vac-HO-whe">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body condition: " lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmU-HU-P4R">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoS-Wl-LLj">
+                                <string key="text">Based on your parameters, your
+ideal weight is:</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LPJ-zO-zcX" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" id="5yP-qS-6eF"/>
-                            <constraint firstItem="quJ-Ms-xal" firstAttribute="centerY" secondItem="LPJ-zO-zcX" secondAttribute="centerY" constant="98.25" id="9R8-nL-uD0"/>
+                            <constraint firstAttribute="trailing" secondItem="Vac-HO-whe" secondAttribute="trailing" constant="15" id="7hc-E6-1YK"/>
+                            <constraint firstItem="JoS-Wl-LLj" firstAttribute="top" secondItem="KmU-HU-P4R" secondAttribute="bottom" constant="15" id="80g-Tb-Pq9"/>
                             <constraint firstItem="but-mZ-6zs" firstAttribute="trailing" secondItem="AUK-2k-UOS" secondAttribute="trailingMargin" id="GcU-Nj-ZKS"/>
-                            <constraint firstItem="rjP-0L-Cee" firstAttribute="leading" secondItem="quJ-Ms-xal" secondAttribute="leading" id="QcP-XH-k8I"/>
-                            <constraint firstItem="rjP-0L-Cee" firstAttribute="top" secondItem="LPJ-zO-zcX" secondAttribute="bottom" constant="8" symbolic="YES" id="VIO-Vq-bIH"/>
-                            <constraint firstItem="quJ-Ms-xal" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leadingMargin" id="ePx-Yh-Jef"/>
-                            <constraint firstItem="rjP-0L-Cee" firstAttribute="trailing" secondItem="LPJ-zO-zcX" secondAttribute="trailing" constant="100" id="j1k-9n-nHd"/>
+                            <constraint firstItem="Vac-HO-whe" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" constant="15" id="HoB-qv-eYI"/>
+                            <constraint firstItem="quJ-Ms-xal" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leadingMargin" constant="-1.5" id="ICG-aL-mEG"/>
+                            <constraint firstItem="rjP-0L-Cee" firstAttribute="top" secondItem="but-mZ-6zs" secondAttribute="bottom" constant="8" id="IN3-iz-Zj6"/>
+                            <constraint firstAttribute="trailing" secondItem="KmU-HU-P4R" secondAttribute="trailing" constant="15" id="PI7-ML-tNe"/>
+                            <constraint firstItem="JoS-Wl-LLj" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" constant="15" id="Q8Q-lA-VcI"/>
+                            <constraint firstItem="but-mZ-6zs" firstAttribute="top" secondItem="eds-PI-VJh" secondAttribute="bottom" constant="8" id="Vn9-3k-hOC"/>
+                            <constraint firstItem="KmU-HU-P4R" firstAttribute="top" secondItem="Vac-HO-whe" secondAttribute="bottom" constant="15" id="WBc-Aa-Uxl"/>
+                            <constraint firstItem="rjP-0L-Cee" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" constant="15" id="X4T-Fn-P2m"/>
+                            <constraint firstItem="Vac-HO-whe" firstAttribute="top" secondItem="quJ-Ms-xal" secondAttribute="bottom" constant="15" id="XYl-Ei-qAr"/>
+                            <constraint firstAttribute="trailing" secondItem="rjP-0L-Cee" secondAttribute="trailing" constant="15" id="Y2S-FW-La5"/>
+                            <constraint firstItem="quJ-Ms-xal" firstAttribute="top" secondItem="rjP-0L-Cee" secondAttribute="bottom" constant="15" id="YZS-yM-gvy"/>
+                            <constraint firstItem="quJ-Ms-xal" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" constant="15" id="Ynl-Hm-r2o"/>
+                            <constraint firstAttribute="trailing" secondItem="quJ-Ms-xal" secondAttribute="trailing" constant="15" id="bxo-j4-8K4"/>
+                            <constraint firstItem="KmU-HU-P4R" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" constant="15" id="gNj-Mh-05J"/>
                             <constraint firstAttribute="leadingMargin" secondItem="LPJ-zO-zcX" secondAttribute="leading" constant="16" id="jNW-cE-34v"/>
-                            <constraint firstItem="but-mZ-6zs" firstAttribute="top" secondItem="eds-PI-VJh" secondAttribute="bottom" constant="8" id="qQW-zL-9xd"/>
-                            <constraint firstItem="LPJ-zO-zcX" firstAttribute="top" secondItem="eds-PI-VJh" secondAttribute="bottom" id="xP4-Vb-zgo"/>
+                            <constraint firstItem="LPJ-zO-zcX" firstAttribute="top" secondItem="eds-PI-VJh" secondAttribute="bottom" id="r8d-Bo-w6s"/>
+                            <constraint firstAttribute="trailing" secondItem="JoS-Wl-LLj" secondAttribute="trailing" constant="15" id="zbW-KM-krX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your personal information" id="4m7-4m-jZk">
@@ -195,12 +223,15 @@
                     <connections>
                         <outlet property="BMILabel" destination="quJ-Ms-xal" id="ut0-Wm-83f"/>
                         <outlet property="ageLabel" destination="rjP-0L-Cee" id="rx4-Nv-25U"/>
+                        <outlet property="bodyConditionLabel" destination="KmU-HU-P4R" id="qQK-r4-pGE"/>
                         <outlet property="genderImage" destination="but-mZ-6zs" id="eca-VB-jSd"/>
+                        <outlet property="idealWeightLabel" destination="JoS-Wl-LLj" id="s1w-ws-aMc"/>
+                        <outlet property="riskFactorLabel" destination="Vac-HO-whe" id="v1Y-eg-ao0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oo5-bS-b4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3901.5999999999999" y="521.28935532233891"/>
+            <point key="canvasLocation" x="3900" y="519.71830985915494"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sqH-B3-wlP">

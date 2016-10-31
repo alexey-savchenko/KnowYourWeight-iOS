@@ -23,15 +23,14 @@ enum Gender: String {
 }
 
 class Person {
-    var condition: Condition
+    //var condition: Condition
     var gender: Gender
     var weight: Int
     var height: Int
     var age: Int
     
-    init(_gender: Gender, _condition: Condition, _weight: Int, _height: Int, _age: Int) {
+    init(_gender: Gender, _weight: Int, _height: Int, _age: Int) {
         self.gender = _gender
-        self.condition = _condition
         self.weight = _weight
         self.height = _height
         self.age = _age
