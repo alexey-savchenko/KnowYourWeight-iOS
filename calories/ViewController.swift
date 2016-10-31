@@ -7,32 +7,47 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    var bodyCondition: Condition?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         self.heightValue.delegate = self
         self.weightValue.delegate = self
-    }
+        
+        let EndPoint: String = "https://bmi.p.mashape.com/"
+        let _parameters: Parameters = [
+            "weight": ["value": 85, "unit": "kg"],
+            "height": ["value": 180, "unit": "cm"],
+            "sex": "m",
+            "age": 25
+        ]
+        let _headers: HTTPHeaders = [
+            "X-Mashape-Key": "FYXjzFgpJgmshPFR4cCXV2Do7FpOp13Kh8OjsnoQRIJkoLa6Hf",
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        ]
+        
+        //let validParams = JSONSerialization.isValidJSONObject(parameters)
 
+        Alamofire.request(EndPoint, method: .post, parameters: _parameters, encoding: JSONEncoding.default, headers: _headers).responseJSON {response in
+            print(response)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-    
-    
-    
-    
-    
     
     let bodyConditions: Dictionary = ["very_underweight": "You are very severely underweight",
                                       "severely_underweight": "You are severely underweight",
@@ -41,64 +56,100 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                       "overweight": "You are overweight",
                                       "obese": "You are obese"]
     
+    @IBOutlet weak var genderSelected: UISegmentedControl!
+    
+    @IBOutlet weak var ageSlider: UISlider!
+    
+    @IBOutlet weak var ageLabel: UILabel!
+    
     @IBOutlet weak var information: UILabel!
     
     @IBOutlet weak var weightValue: UITextField!
     
     @IBOutlet weak var heightValue: UITextField!
     
-    @IBOutlet weak var BMI_Value: UILabel!
-    
     @IBOutlet weak var moreInfoBtn: UIButton!
     
     @IBAction func CalculateBMI(_ sender: AnyObject) {
         
-        let _weight = Double(weightValue.text!)
-        
-        let _height = Double(heightValue.text!)
-        
-        let calulationResult = calculation(weight: _weight!, height: _height!)
-        
-        BMI_Value.text = calulationResult
-        
-        if Double(calulationResult)! < 15 {
-            information.text = bodyConditions["very_underweight"]
-            bodyCondition = Condition.very_underweight
-        } else if Double(calulationResult)! > 15 && Double(calulationResult)! < 16{
-            information.text = bodyConditions["severely_underweight"]
-            bodyCondition = Condition.severely_underweight
-        } else if Double(calulationResult)! > 16 && Double(calulationResult)! < 18{
-            information.text = bodyConditions["underweight"]
-            bodyCondition = Condition.underweight
-        } else if Double(calulationResult)! > 18 && Double(calulationResult)! < 25{
-            information.text = bodyConditions["normal"]
-            bodyCondition = Condition.normal
+        if let _weight = Double(weightValue.text!){
+            if let _height = Double(heightValue.text!){
+                
+                let calulationResult = calculation(weight: _weight, height: _height)
+                
+                if calulationResult < 15 {
+                  
+                    information.text = bodyConditions["very_underweight"]
+                    
+                    
+                } else if calulationResult > 15 && calulationResult < 16{
 
-        } else if Double(calulationResult)! > 25 && Double(calulationResult)! < 30{
-            information.text = bodyConditions["overweight"]
-            bodyCondition = Condition.overweight
+                    information.text = bodyConditions["severely_underweight"]
+                    
+                    
+                } else if calulationResult > 16 && calulationResult < 18{
 
-        } else if Double(calulationResult)! > 30 {
-            information.text = bodyConditions["obese"]
-            bodyCondition = Condition.obese
+                    information.text = bodyConditions["underweight"]
+                    
+                    
+                } else if calulationResult > 18 && calulationResult < 25{
 
+                    information.text = bodyConditions["normal"]
+                    
+                    
+                } else if calulationResult > 25 && calulationResult < 30{
+                   
+                    information.text = bodyConditions["overweight"]
+                    
+                    
+                } else if calulationResult > 30 {
+                 
+                    information.text = bodyConditions["obese"]
+                    
+                }
+                
+                moreInfoBtn.isEnabled = true
+                
+            }
         }
-        moreInfoBtn.isEnabled = true
     }
     
-    func calculation(weight: Double, height: Double) -> String{
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        ageLabel.text = "\(Int(round(sender.value)))"
+    }
+    
+    
+    func calculation(weight: Double, height: Double) -> Int{
         let result: Double = weight / (pow((height / 100), 2))
-        return String(round(100 * result) / 100)
+        print("frst BMI: \(result)")
+        return Int(round(result))
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         
-        let newContion = bodyCondition
+        let newHeight = Int(heightValue.text!)!
+        
+        let newWeight = Int(weightValue.text!)!
+        
+        let newAge = Int(ageSlider.value)
+        
+        var newGender: Gender
+        
+        if genderSelected.selectedSegmentIndex == 0{
+            newGender = .Male
+        } else {
+            newGender = .Female
+        }
+        
+        let newPerson = Person(_gender: newGender, _weight: newWeight, _height: newHeight, _age: newAge)
+        
         let navController = segue.destination as! UINavigationController
-        let detailedViewController = navController.topViewController as! DetailedViewController
         
-        detailedViewController.condition = newContion
+        if let detailedViewController = navController.topViewController as? DetailedViewController {
+            
+            detailedViewController.person = newPerson
         
+        }
     }
 }
 
