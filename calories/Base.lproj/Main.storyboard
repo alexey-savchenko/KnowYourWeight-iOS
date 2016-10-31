@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="1DS-ao-aI6">
@@ -86,13 +86,12 @@
                                     <segment title="Female"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHl-fn-cIc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill the fields above" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ab-se-ket">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fill the fields above" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ab-se-ket">
-                                <frame key="frameInset" minX="72" minY="554" width="231" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHl-fn-cIc">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -100,13 +99,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1ab-se-ket" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6CN-BS-xvO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ygk-F9-UJq" secondAttribute="trailing" constant="111" id="7ve-YO-T9G"/>
                             <constraint firstItem="Bnf-uy-wo7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Arh-IE-qpE"/>
                             <constraint firstItem="Bnf-uy-wo7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="EjZ-5A-kbM"/>
+                            <constraint firstItem="1ab-se-ket" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HWL-R8-6Ga"/>
                             <constraint firstItem="cHl-fn-cIc" firstAttribute="top" secondItem="8P0-7p-QuS" secondAttribute="bottom" constant="8" id="LrV-4N-y4h"/>
                             <constraint firstItem="1DS-ao-aI6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="NCO-eC-neq"/>
-                            <constraint firstItem="1ab-se-ket" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="56" id="Vvc-Q8-2Ey"/>
+                            <constraint firstItem="cHl-fn-cIc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RQA-CR-seY"/>
                             <constraint firstItem="Bnf-uy-wo7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="25" id="YN2-5o-c4e"/>
                             <constraint firstItem="J7s-gt-0sE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="600" id="arL-bn-vg1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1DS-ao-aI6" secondAttribute="trailing" constant="20" id="f2g-1l-IzI"/>
@@ -115,7 +114,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="J7s-gt-0sE" secondAttribute="trailing" id="jzX-z4-Ihx"/>
                             <constraint firstItem="1DS-ao-aI6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="249" id="ma8-nE-KgF"/>
                             <constraint firstItem="ygk-F9-UJq" firstAttribute="top" secondItem="Bnf-uy-wo7" secondAttribute="bottom" constant="14" id="odC-hE-LcT"/>
-                            <constraint firstItem="cHl-fn-cIc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="145" id="vH6-jW-iGm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I5f-ar-0jh"/>
@@ -142,7 +140,7 @@
                         <viewControllerLayoutGuide type="bottom" id="BOG-au-kD2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AUK-2k-UOS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
                             <userLayoutGuide location="16" affinity="minX"/>
