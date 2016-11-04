@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="1DS-ao-aI6">
@@ -81,6 +81,9 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bnf-uy-wo7"/>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ygk-F9-UJq">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="ZIC-DZ-HaR"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Male"/>
                                     <segment title="Female"/>
@@ -117,6 +120,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I5f-ar-0jh"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="ageLabel" destination="CZp-c6-fie" id="q8q-9y-2Ow"/>
                         <outlet property="ageSlider" destination="oLX-Fh-iWp" id="XIV-Ee-aVO"/>
@@ -140,7 +144,7 @@
                         <viewControllerLayoutGuide type="bottom" id="BOG-au-kD2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AUK-2k-UOS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
                             <userLayoutGuide location="16" affinity="minX"/>
@@ -185,6 +189,11 @@ ideal weight is:</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="og4-iW-h9F">
+                                <frame key="frameInset" minX="69" minY="406" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -193,7 +202,6 @@ ideal weight is:</string>
                             <constraint firstItem="JoS-Wl-LLj" firstAttribute="top" secondItem="KmU-HU-P4R" secondAttribute="bottom" constant="15" id="80g-Tb-Pq9"/>
                             <constraint firstItem="but-mZ-6zs" firstAttribute="trailing" secondItem="AUK-2k-UOS" secondAttribute="trailingMargin" id="GcU-Nj-ZKS"/>
                             <constraint firstItem="Vac-HO-whe" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" constant="15" id="HoB-qv-eYI"/>
-                            <constraint firstItem="quJ-Ms-xal" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leadingMargin" constant="-1.5" id="ICG-aL-mEG"/>
                             <constraint firstItem="rjP-0L-Cee" firstAttribute="top" secondItem="but-mZ-6zs" secondAttribute="bottom" constant="8" id="IN3-iz-Zj6"/>
                             <constraint firstAttribute="trailing" secondItem="KmU-HU-P4R" secondAttribute="trailing" constant="15" id="PI7-ML-tNe"/>
                             <constraint firstItem="JoS-Wl-LLj" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" constant="15" id="Q8Q-lA-VcI"/>
@@ -206,7 +214,6 @@ ideal weight is:</string>
                             <constraint firstItem="quJ-Ms-xal" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" constant="15" id="Ynl-Hm-r2o"/>
                             <constraint firstAttribute="trailing" secondItem="quJ-Ms-xal" secondAttribute="trailing" constant="15" id="bxo-j4-8K4"/>
                             <constraint firstItem="KmU-HU-P4R" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" constant="15" id="gNj-Mh-05J"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="LPJ-zO-zcX" secondAttribute="leading" constant="16" id="jNW-cE-34v"/>
                             <constraint firstItem="LPJ-zO-zcX" firstAttribute="top" secondItem="eds-PI-VJh" secondAttribute="bottom" id="r8d-Bo-w6s"/>
                             <constraint firstAttribute="trailing" secondItem="JoS-Wl-LLj" secondAttribute="trailing" constant="15" id="zbW-KM-krX"/>
                         </constraints>

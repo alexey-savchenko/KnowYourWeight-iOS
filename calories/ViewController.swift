@@ -20,29 +20,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.heightValue.delegate = self
         self.weightValue.delegate = self
         
-        let EndPoint: String = "https://bmi.p.mashape.com/"
-        let _parameters: Parameters = [
-            "weight": ["value": 85, "unit": "kg"],
-            "height": ["value": 180, "unit": "cm"],
-            "sex": "m",
-            "age": 25
-        ]
-        let _headers: HTTPHeaders = [
-            "X-Mashape-Key": "FYXjzFgpJgmshPFR4cCXV2Do7FpOp13Kh8OjsnoQRIJkoLa6Hf",
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        ]
-        
-        //let validParams = JSONSerialization.isValidJSONObject(parameters)
-
-        Alamofire.request(EndPoint, method: .post, parameters: _parameters, encoding: JSONEncoding.default, headers: _headers).responseJSON {response in
-            print(response)
-        }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
