@@ -11,7 +11,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class DetailedViewController: UIViewController{
+class DetailedViewController: UIViewController {
 
     @IBOutlet weak var BMILabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -20,8 +20,10 @@ class DetailedViewController: UIViewController{
     @IBOutlet weak var bodyConditionLabel: UILabel!
     @IBOutlet weak var idealWeightLabel: UILabel!
     
+
+    
     var person: Person? = nil
-    var dictionaryFromRequest: [String : String] = ["": ""]
+    var dictionaryFromRequest: JSON? = nil
     
     
     
@@ -29,15 +31,19 @@ class DetailedViewController: UIViewController{
         
         super.viewDidLoad()
 
+      
+        
         if person?.gender == Gender.Male{
             genderImage.image = UIImage(named: "male-sign")
         } else{
             genderImage.image = UIImage(named: "female-sign")
         }
         
+        
         ageLabel.text = "Age: \(person!.age)"
         
         performRequest()
+        
     }
     
     func performRequest(){
@@ -54,10 +60,17 @@ class DetailedViewController: UIViewController{
             "Accept": "application/json"
         ]
         
-        Alamofire.request(EndPoint, method: .post, parameters: _parameters, encoding: JSONEncoding.default, headers: _headers).responseJSON {responseData in
-            if responseData.result.value != nil{
-                let swiftyJSONVar = JSON(responseData.result.value!)
-                self.configureView(json: swiftyJSONVar)
+        DispatchQueue.global().async {
+            Alamofire.request(EndPoint, method: .post, parameters: _parameters, encoding: JSONEncoding.default, headers: _headers).responseJSON {responseData in
+                if responseData.result.value != nil{
+                    let swiftyJSONVar = JSON(responseData.result.value!)
+                    
+                    self.dictionaryFromRequest = swiftyJSONVar
+                    
+                    DispatchQueue.global().sync {
+                        self.configureView(json: swiftyJSONVar)
+                    }
+                }
             }
         }
     }
