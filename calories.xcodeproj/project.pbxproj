@@ -19,7 +19,6 @@
 		80730C011DBE7B1500133136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80730BFF1DBE7B1500133136 /* LaunchScreen.storyboard */; };
 		80F480501DC1E95900F0A3DD /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 80F4804F1DC1E95900F0A3DD /* cross.png */; };
 		80FEA1771DD4A2FD0068858D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FEA1761DD4A2FD0068858D /* Recipe.swift */; };
-		80FEA17B1DD4A3EC0068858D /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 80FEA17A1DD4A3EC0068858D /* recipes.json */; };
 		CF1615D065640734C06DE199 /* Pods_calories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089CBB8211BFEE0809F2F9AC /* Pods_calories.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +39,6 @@
 		80730C021DBE7B1500133136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80F4804F1DC1E95900F0A3DD /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		80FEA1761DD4A2FD0068858D /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		80FEA17A1DD4A3EC0068858D /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = recipes.json; path = ../../../Desktop/recipes.json; sourceTree = "<group>"; };
 		A28E8E1771C014A46C3068F1 /* Pods-calories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calories.release.xcconfig"; path = "Pods/Target Support Files/Pods-calories/Pods-calories.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +96,6 @@
 		80730BF51DBE7B1500133136 /* calories */ = {
 			isa = PBXGroup;
 			children = (
-				80FEA1791DD4A3550068858D /* JSON */,
 				80F4804F1DC1E95900F0A3DD /* cross.png */,
 				80730BF61DBE7B1500133136 /* AppDelegate.swift */,
 				8057198F1DD21A27006A1468 /* ViewControllers */,
@@ -109,14 +106,6 @@
 				805719901DD21A36006A1468 /* Models */,
 			);
 			path = calories;
-			sourceTree = "<group>";
-		};
-		80FEA1791DD4A3550068858D /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				80FEA17A1DD4A3EC0068858D /* recipes.json */,
-			);
-			name = JSON;
 			sourceTree = "<group>";
 		};
 		9B3C073656E7FB8BC97576F8 /* Frameworks */ = {
@@ -199,7 +188,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80FEA17B1DD4A3EC0068858D /* recipes.json in Resources */,
 				80730C011DBE7B1500133136 /* LaunchScreen.storyboard in Resources */,
 				80730BFE1DBE7B1500133136 /* Assets.xcassets in Resources */,
 				80F480501DC1E95900F0A3DD /* cross.png in Resources */,

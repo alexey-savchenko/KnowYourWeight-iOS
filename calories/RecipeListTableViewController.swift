@@ -23,10 +23,13 @@ class RecipeListTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    var JSONData: JSON? = nil
+    var JSONData: JSON?
 
     override func viewDidAppear(_ animated: Bool) {
-        print(JSONData)
+        DispatchQueue.global().sync {
+            
+            print("\n ---------\n \n ---------\n \n ---------\n \n ---------\n \n ---------\n \(JSONData) \n ---------\n ")
+        }
     }
     
     // MARK: - Table view data source

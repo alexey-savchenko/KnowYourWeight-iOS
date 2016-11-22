@@ -18,15 +18,6 @@ struct Ingridient {
     let weight: Double
 }
 
-enum Diet: String{
-    case balanced = "balanced"
-    case high_protein = "high-protein"
-    case high_fiber = "high-fiber"
-    case low_carb = "low-carb"
-    case low_sodium = "low-sodium"
-    
-    static let dietArray = ["Balanced", "High-protein", "Low-carbonate", "Low-fat"]
-}
 
 struct Recipe{
     
@@ -37,7 +28,4 @@ struct Recipe{
     let source: String
     let ingredients: [Ingridient]
     let ingredientLines: String ///test
-    
-    
-    
 }

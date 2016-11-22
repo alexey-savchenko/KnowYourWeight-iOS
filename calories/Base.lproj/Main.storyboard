@@ -403,6 +403,9 @@ ideal weight is:</string>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="0.0" maxValue="3000" translatesAutoresizingMaskIntoConstraints="NO" id="ZLh-Wz-Blb">
                                 <rect key="frame" x="10" y="247" width="355" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.57159991588436698" green="1" blue="0.36711981830480478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="1" green="0.45009477035953527" blue="0.45228900849701936" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.73597553448873265" green="0.93104941121587226" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="sliderChanged:" destination="m7a-5r-jTv" eventType="valueChanged" id="tLa-nk-obd"/>
                                 </connections>
@@ -434,6 +437,11 @@ ideal weight is:</string>
                                     <action selector="selectDietBtnPressed:" destination="m7a-5r-jTv" eventType="touchUpInside" id="7Q3-ML-n9O"/>
                                 </connections>
                             </button>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-n9-id1">
+                                <rect key="frame" x="134" y="566" width="108" height="2.5"/>
+                                <color key="progressTintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="1" green="0.82094460959445836" blue="0.74375017296190427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -444,12 +452,16 @@ ideal weight is:</string>
                             <constraint firstItem="FwD-Cb-6LG" firstAttribute="leading" secondItem="kiq-Uh-zQr" secondAttribute="trailing" constant="7.5" id="Ce0-PK-v7h"/>
                             <constraint firstItem="ZLh-Wz-Blb" firstAttribute="top" secondItem="FwD-Cb-6LG" secondAttribute="bottom" constant="8" id="Gch-uY-Xph"/>
                             <constraint firstItem="kiq-Uh-zQr" firstAttribute="leading" secondItem="ced-TO-5hi" secondAttribute="leadingMargin" constant="-4" id="M86-gR-zkr"/>
+                            <constraint firstItem="z8g-n9-id1" firstAttribute="top" secondItem="VZy-R4-Xn8" secondAttribute="bottom" constant="46" id="Mtm-wn-QU0"/>
                             <constraint firstItem="awH-QV-eR5" firstAttribute="centerX" secondItem="ced-TO-5hi" secondAttribute="centerX" id="Q0t-Cj-BDO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="035-LH-T6J" secondAttribute="trailing" constant="-4" id="THQ-jU-FKv"/>
                             <constraint firstItem="kiq-Uh-zQr" firstAttribute="top" secondItem="035-LH-T6J" secondAttribute="bottom" constant="26" id="TKW-Gj-GAO"/>
                             <constraint firstItem="awH-QV-eR5" firstAttribute="top" secondItem="ncI-pB-fko" secondAttribute="bottom" constant="41" id="Ur5-fu-L2v"/>
                             <constraint firstItem="ZLh-Wz-Blb" firstAttribute="trailing" secondItem="ced-TO-5hi" secondAttribute="trailingMargin" constant="4" id="Z3H-Ru-L7p"/>
                             <constraint firstItem="035-LH-T6J" firstAttribute="leading" secondItem="ced-TO-5hi" secondAttribute="leadingMargin" constant="-4" id="ZK7-Bn-7iT"/>
+                            <constraint firstItem="z8g-n9-id1" firstAttribute="centerX" secondItem="ced-TO-5hi" secondAttribute="centerX" id="csK-6d-Z0R"/>
+                            <constraint firstItem="z8g-n9-id1" firstAttribute="leading" secondItem="ced-TO-5hi" secondAttribute="leadingMargin" constant="118" id="hnm-2v-3Zu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z8g-n9-id1" secondAttribute="trailing" constant="117" id="pSH-rt-pf7"/>
                             <constraint firstItem="VZy-R4-Xn8" firstAttribute="top" secondItem="awH-QV-eR5" secondAttribute="bottom" constant="18" id="rLx-O8-FmL"/>
                             <constraint firstItem="VZy-R4-Xn8" firstAttribute="centerX" secondItem="ced-TO-5hi" secondAttribute="centerX" id="tjY-YE-n7O"/>
                             <constraint firstItem="035-LH-T6J" firstAttribute="top" secondItem="BmB-7a-lFG" secondAttribute="bottom" id="uKG-GT-HXl"/>
@@ -466,6 +478,7 @@ ideal weight is:</string>
                     <connections>
                         <outlet property="dietPicker" destination="awH-QV-eR5" id="zKH-w3-E7M"/>
                         <outlet property="maximumCaloriesPerRecipeLabel" destination="FwD-Cb-6LG" id="6Dg-ku-0yt"/>
+                        <outlet property="progressBar" destination="z8g-n9-id1" id="jdv-e0-Bqb"/>
                         <outlet property="searchBtn" destination="VZy-R4-Xn8" id="yNj-TU-tsP"/>
                         <outlet property="selectDietBtn" destination="ncI-pB-fko" id="71s-va-BL2"/>
                     </connections>
