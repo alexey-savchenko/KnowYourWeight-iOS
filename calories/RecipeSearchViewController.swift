@@ -21,6 +21,8 @@ class RecipeSearchViewController: UIViewController, UIPickerViewDelegate, UIPick
         
     }
     
+    //MARK: PROPERTIES
+    
     @IBOutlet weak var maximumCaloriesPerRecipeLabel: UILabel!
     @IBOutlet weak var dietPicker: UIPickerView!
     @IBOutlet weak var selectDietBtn: UIButton!
@@ -32,6 +34,9 @@ class RecipeSearchViewController: UIViewController, UIPickerViewDelegate, UIPick
     var selectedDiet: String? = nil
     var _responseInJSON: JSON?
     var timer = Timer()
+    
+    
+    //MARK: METHODS
     
     @IBAction func selectDietBtnPressed(_ sender: UIButton) {
         dietPicker.isHidden = false
@@ -65,20 +70,14 @@ class RecipeSearchViewController: UIViewController, UIPickerViewDelegate, UIPick
         selectDietBtn.setTitle(dietSelected, for: .normal)
         dietPicker.isHidden = true
         searchBtn.isEnabled = false
-        
+    
         selectedDiet = dietSelected.lowercased()
-        
         endPoint = makeEndPoint()
-        
         self.makeRequest(to: self.endPoint)
-        
         progressBar.isHidden = false
         progressBar.progress = 0
-        
         // start the timer
         timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-        
-        
     }
     func timerAction(){
         progressBar.progress += 0.2
@@ -92,9 +91,6 @@ class RecipeSearchViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBAction func searchBtnPressed(_ sender: UIButton) {
         
         print("================\n \(endPoint) \n ================\n ")
-        
-        
-        
     }
     
     func makeEndPoint() -> String{
@@ -102,17 +98,11 @@ class RecipeSearchViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func makeRequest(to endPoint: String) {
-        
         Alamofire.request(endPoint).responseJSON{ response in
             if let value = response.result.value {
-                
                 let responseInJSON = JSON(value)
-                
                 self._responseInJSON = responseInJSON
-                print("\n++++++++++++++++++++++++++=+\n\(self._responseInJSON!)\n++++++++++++++++++++++++++=+\n")
-                
-                
-                
+                print("\n+++++++++++++++++++++++++++\n\(self._responseInJSON!)\n+++++++++++++++++++++++++++\n")
             }
         }
     }

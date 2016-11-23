@@ -10,14 +10,6 @@ import Foundation
 import UIKit
 import SwiftyJSON
 
-struct Ingridient {
-    let text: String
-    let quantity: Double
-    let measure: String
-    let food: String
-    let weight: Double
-}
-
 
 struct Recipe{
     
@@ -26,6 +18,7 @@ struct Recipe{
     
     let label: String
     let source: String
-    let ingredients: [Ingridient]
-    let ingredientLines: String ///test
+    let ingredients: [String]
+    let ingredientLines: [String]
+    let image: URL
 }
