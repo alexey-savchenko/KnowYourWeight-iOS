@@ -19,6 +19,9 @@ struct Recipe{
     let label: String
     let source: String
     let ingredients: [String]
-    let ingredientLines: [String]
+    let URL: String
+    let healthLabels: [String]
     let image: URL
+
 }
+
