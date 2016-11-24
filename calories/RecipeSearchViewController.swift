@@ -77,7 +77,7 @@ class RecipeSearchViewController: UIViewController, UIPickerViewDelegate, UIPick
         progressBar.isHidden = false
         progressBar.progress = 0
         // start the timer
-        timer = Timer.scheduledTimer(timeInterval: 0.075, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
     }
     func timerAction(){
         progressBar.progress += 0.075
@@ -94,7 +94,7 @@ class RecipeSearchViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func makeEndPoint() -> String{
-        return "https://api.edamam.com/search?q=&app_id=\(Recipe.edamamAppId)&app_key=\(Recipe.edamamAppKey)&from=0&to=25&diet=\(selectedDiet!)&calories=lte%20\(maximumCaloriesPerRecipeLabel.text!)&health=alcohol-free"
+        return "https://api.edamam.com/search?q=&app_id=\(Recipe.edamamAppId)&app_key=\(Recipe.edamamAppKey)&from=0&to=75&diet=\(selectedDiet!)&calories=lte%20\(maximumCaloriesPerRecipeLabel.text!)&health=alcohol-free"
     }
     
     func makeRequest(to endPoint: String) {

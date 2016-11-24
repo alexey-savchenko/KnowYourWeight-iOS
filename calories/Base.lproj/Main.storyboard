@@ -527,7 +527,6 @@ ideal weight is:</string>
                                 <connections>
                                     <outlet property="recipeImage" destination="joS-sh-qiz" id="yB6-fD-GWI"/>
                                     <outlet property="recipeLabel" destination="EV6-Gq-28k" id="Cav-YA-IBJ"/>
-                                    <segue destination="mCi-7E-3qG" kind="show" id="xo0-Qq-WyK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -536,6 +535,9 @@ ideal weight is:</string>
                             <outlet property="delegate" destination="1Iu-DT-h7u" id="C5M-DU-UHi"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="mCi-7E-3qG" kind="show" identifier="segueToRecipe" id="LlR-70-Fh1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oqt-rx-5Vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

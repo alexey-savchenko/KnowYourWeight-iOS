@@ -42,7 +42,7 @@ class RecipeListTableViewController: UITableViewController {
     var JSONData: JSON?
     var recipeArray = [Recipe]()
     
-    var selectedRecipeIndex = 0
+    var selectedRecipeIndex: Int?
     
     
     // MARK: - Table view data source
@@ -71,17 +71,18 @@ class RecipeListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         selectedRecipeIndex = indexPath.row
-        print("\n \(indexPath.row) \n -------- \n \(selectedRecipeIndex) \n -------- \n \(recipeArray[selectedRecipeIndex])")
+        performSegue(withIdentifier: "segueToRecipe", sender: UITableViewCell())
+        print("\n \(indexPath.row) \n -------- \n \(selectedRecipeIndex) \n -------- \n \(recipeArray[selectedRecipeIndex!])")
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let controller = segue.destination as? RecipeViewController {
-            print(controller)
-            controller.selectedRecipe = recipeArray[selectedRecipeIndex]
-            
+        if segue.identifier == "segueToRecipe"{
+            if let controller = segue.destination as? RecipeViewController {
+                print(controller)
+                controller.selectedRecipe = recipeArray[selectedRecipeIndex!]
+            }
         }
     }
-    
 }
