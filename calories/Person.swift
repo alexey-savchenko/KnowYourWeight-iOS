@@ -8,13 +8,13 @@
 
 import Foundation
 
-enum Condition {
-    case very_underweight
-    case severely_underweight
-    case underweight
-    case normal
-    case overweight
-    case obese
+enum Condition: String {
+    case very_underweight = "very underweight"
+    case severely_underweight = "severely underweight"
+    case underweight = "underweight"
+    case normal = "normal weight"
+    case overweight = "overweight"
+    case obese = "exessive weight"
 }
 
 enum Gender: String {
