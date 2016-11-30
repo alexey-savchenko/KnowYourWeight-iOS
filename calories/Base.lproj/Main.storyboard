@@ -59,14 +59,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="best-food" translatesAutoresizingMaskIntoConstraints="NO" id="yye-br-sQU">
-                                                    <rect key="frame" x="-82" y="-43.5" width="539" height="307"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="best-food" translatesAutoresizingMaskIntoConstraints="NO" id="yye-br-sQU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="220" id="0YZ-6I-s8K"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poR-4Z-BgA">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="poR-4Z-BgA">
                                                     <rect key="frame" x="70" y="35" width="235" height="150"/>
-                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="39"/>
-                                                    <state key="normal" title="Food recipes">
-                                                        <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Food recipes">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="39" name="AmericanTypewriter-Semibold"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                     </state>
                                                     <connections>
                                                         <segue destination="ULY-uU-VB6" kind="show" id="SPD-WI-Rix"/>
@@ -506,15 +515,7 @@ ideal weight is:</string>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EV6-Gq-28k">
                                             <rect key="frame" x="153" y="11" width="189" height="130"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <attributedString key="attributedText">
-                                                <fragment content="Label">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="20" name="AmericanTypewriter"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                            <attributedString key="attributedText"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="joS-sh-qiz">
@@ -582,6 +583,12 @@ ideal weight is:</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H63-Ww-jJ2">
+                                        <rect key="frame" x="0.0" y="111" width="343" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJh-y8-1rf">
                                         <rect key="frame" x="103" y="61" width="137" height="30"/>
                                         <state key="normal" title="Go to full recipe"/>
@@ -596,13 +603,16 @@ ideal weight is:</string>
                                     <constraint firstItem="I0e-ct-cq8" firstAttribute="leading" secondItem="KYA-dH-OI0" secondAttribute="leading" id="Cg1-PU-T7x"/>
                                     <constraint firstItem="I0e-ct-cq8" firstAttribute="leading" secondItem="PKr-zu-s0K" secondAttribute="leading" id="DZc-P0-B5s"/>
                                     <constraint firstItem="pJh-y8-1rf" firstAttribute="centerX" secondItem="KYA-dH-OI0" secondAttribute="centerX" id="IWD-DF-2Nx"/>
+                                    <constraint firstAttribute="trailing" secondItem="H63-Ww-jJ2" secondAttribute="trailing" id="L2E-ek-3LR"/>
                                     <constraint firstItem="PKr-zu-s0K" firstAttribute="leading" secondItem="J8C-nc-qLB" secondAttribute="leading" id="OKd-5w-722"/>
                                     <constraint firstItem="J8C-nc-qLB" firstAttribute="top" secondItem="PKr-zu-s0K" secondAttribute="bottom" constant="17" id="OWo-ZX-nRu"/>
+                                    <constraint firstItem="H63-Ww-jJ2" firstAttribute="leading" secondItem="KYA-dH-OI0" secondAttribute="leading" id="Q2m-eJ-gs4"/>
                                     <constraint firstItem="pJh-y8-1rf" firstAttribute="leading" secondItem="KYA-dH-OI0" secondAttribute="leading" constant="103" id="XIT-c1-Wr3"/>
                                     <constraint firstItem="PKr-zu-s0K" firstAttribute="trailing" secondItem="J8C-nc-qLB" secondAttribute="trailing" id="ZdO-e0-9fr"/>
                                     <constraint firstItem="pJh-y8-1rf" firstAttribute="top" secondItem="J8C-nc-qLB" secondAttribute="bottom" constant="24" id="e93-UG-xq5"/>
                                     <constraint firstItem="I0e-ct-cq8" firstAttribute="trailing" secondItem="PKr-zu-s0K" secondAttribute="trailing" id="hOz-yd-fge"/>
                                     <constraint firstAttribute="bottom" secondItem="pJh-y8-1rf" secondAttribute="bottom" constant="352" id="nYE-PU-dae"/>
+                                    <constraint firstItem="H63-Ww-jJ2" firstAttribute="top" secondItem="pJh-y8-1rf" secondAttribute="bottom" constant="20" id="wwM-F4-G7t"/>
                                     <constraint firstAttribute="trailing" secondItem="I0e-ct-cq8" secondAttribute="trailing" id="yvM-FA-a9e"/>
                                     <constraint firstItem="PKr-zu-s0K" firstAttribute="top" secondItem="I0e-ct-cq8" secondAttribute="bottom" constant="20" id="zmj-wz-Aeh"/>
                                 </constraints>
@@ -625,6 +635,7 @@ ideal weight is:</string>
                         <outlet property="recipeImage" destination="H8E-I2-Tle" id="Sbr-PO-bJy"/>
                         <outlet property="recipeTitle" destination="I0e-ct-cq8" id="XRU-sA-l8p"/>
                         <outlet property="recipeURLButton" destination="pJh-y8-1rf" id="QYT-IO-YTf"/>
+                        <outlet property="sourceLabel" destination="H63-Ww-jJ2" id="Rj3-gn-fLE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lcy-bk-veE" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -60,10 +60,15 @@ class RecipeListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recipeNameCell", for: indexPath) as! recipeListCell
         
         let imageURL = recipeArray[indexPath.row].image
-        let imageData = try? Data(contentsOf: imageURL)
+        DispatchQueue.global().async {
+            let imageData = try? Data(contentsOf: imageURL)
+            DispatchQueue.main.async {
+                cell.recipeImage.image = UIImage(data: imageData!)
+                cell.recipeLabel.text = self.recipeArray[indexPath.row].label
+            }
+        }
         
-        cell.recipeImage.image = UIImage(data: imageData!)
-        cell.recipeLabel.text = recipeArray[indexPath.row].label
+        
         
         return cell
     }

@@ -70,7 +70,7 @@ class RecipeSearchViewController: UIViewController, UIPickerViewDelegate, UIPick
         selectDietBtn.setTitle(dietSelected, for: .normal)
         dietPicker.isHidden = true
         searchBtn.isEnabled = false
-    
+        
         selectedDiet = dietSelected.lowercased()
         endPoint = makeEndPoint()
         self.makeRequest(to: self.endPoint)

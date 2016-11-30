@@ -28,18 +28,18 @@ class RecipeViewController: UIViewController {
                 healthLabels.text! += "\(item); "
             }
             
-            
-            
+            sourceLabel.text = "Provided by: \(_recipe.source)"
         }
     }
-
-
+    
+    
     //MARK: PROPERITIES
     
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var healthLabels: UILabel!
     @IBOutlet weak var ingredients: UILabel!
+    @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var recipeURLButton: UIButton!
     
     var url: URL{
@@ -56,7 +56,7 @@ class RecipeViewController: UIViewController {
     
     @IBAction func gotoRecipeURL(_ sender: UIButton) {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
-
+        
     }
     
 }

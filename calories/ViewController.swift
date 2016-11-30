@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,14 +20,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func backButton(_ sender: UIBarButtonItem) {
-         dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-
+    
     
     @IBOutlet weak var genderSelected: UISegmentedControl!
     @IBOutlet weak var ageSlider: UISlider!

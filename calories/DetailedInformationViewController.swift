@@ -12,7 +12,7 @@ import Alamofire
 import SwiftyJSON
 
 class DetailedViewController: UIViewController {
-
+    
     @IBOutlet weak var BMILabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var genderImage: UIImageView!
@@ -20,7 +20,7 @@ class DetailedViewController: UIViewController {
     @IBOutlet weak var bodyConditionLabel: UILabel!
     @IBOutlet weak var idealWeightLabel: UILabel!
     
-
+    
     
     var person: Person? = nil
     var dictionaryFromRequest: JSON? = nil
@@ -30,8 +30,8 @@ class DetailedViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-      
+        
+        
         
         if person?.gender == Gender.Male{
             genderImage.image = UIImage(named: "male-sign")
