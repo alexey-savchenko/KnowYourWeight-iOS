@@ -9,7 +9,8 @@
 import UIKit
 import SwiftyJSON
 import Foundation
-
+import Alamofire
+import AsyncDisplayKit
 
 class RecipeListTableViewController: UITableViewController {
     
@@ -39,18 +40,17 @@ class RecipeListTableViewController: UITableViewController {
     
     // MARK: PROPERTIES
     
+    
     var JSONData: JSON?
     var recipeArray = [Recipe]()
-    
     var selectedRecipeIndex: Int?
-    
+    var imgChache: NSMutableDictionary = NSMutableDictionary()
     
     // MARK: - Table view data source
     
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return recipeArray.count
     }
     
@@ -59,15 +59,27 @@ class RecipeListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recipeNameCell", for: indexPath) as! recipeListCell
         
-        let imageURL = recipeArray[indexPath.row].image
-        DispatchQueue.global().async {
-            let imageData = try? Data(contentsOf: imageURL)
+        // if image for IndexPath in chache load image from chache
+        if imgChache.allKeys.contains(where: {$0 as! Int == indexPath.row}){
             DispatchQueue.main.async {
-                cell.recipeImage.image = UIImage(data: imageData!)
-                cell.recipeLabel.text = self.recipeArray[indexPath.row].label
+                cell.recipeImage.image = self.imgChache.value(forKey: String(indexPath.row)) as! UIImage?
             }
         }
         
+        // if IndexPath key is not present in chache get UIImage from Data
+        DispatchQueue.global().async {
+            let imageData = try? Data(contentsOf: self.recipeArray[indexPath.row].image)
+            DispatchQueue.main.async {
+                if let imageFromData = UIImage(data: imageData!){
+                    cell.recipeImage.image = imageFromData
+                    cell.recipeLabel.text = self.recipeArray[indexPath.row].label
+                    
+                    // add image to chache
+                    self.imgChache.setObject(imageFromData, forKey: indexPath.row as NSCopying)
+                    
+                }
+            }
+        }
         
         
         return cell
@@ -77,7 +89,8 @@ class RecipeListTableViewController: UITableViewController {
         
         selectedRecipeIndex = indexPath.row
         performSegue(withIdentifier: "segueToRecipe", sender: UITableViewCell())
-        print("\n \(indexPath.row) \n -------- \n \(selectedRecipeIndex) \n -------- \n \(recipeArray[selectedRecipeIndex!])")
+        print("\n \(indexPath.row) \n -------- \n \(selectedRecipeIndex) \n -------- \n \(recipeArray[selectedRecipeIndex!]) \n")
+        
         
     }
     

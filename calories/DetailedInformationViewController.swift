@@ -60,7 +60,7 @@ class DetailedViewController: UIViewController {
             "Accept": "application/json"
         ]
         
-        DispatchQueue.global().async {
+        
             Alamofire.request(EndPoint, method: .post, parameters: _parameters, encoding: JSONEncoding.default, headers: _headers).responseJSON {responseData in
                 if responseData.result.value != nil{
                     let swiftyJSONVar = JSON(responseData.result.value!)
@@ -72,7 +72,7 @@ class DetailedViewController: UIViewController {
                     }
                 }
             }
-        }
+        
     }
     
     func configureView(json: JSON) {
