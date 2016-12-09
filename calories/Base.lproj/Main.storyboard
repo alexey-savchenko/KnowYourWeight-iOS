@@ -13,8 +13,8 @@
         <!--Main Menu View Controller-->
         <scene sceneID="335-xU-pat">
             <objects>
-                <tableViewController id="Ue3-S2-HX8" customClass="MainMenuViewController" customModule="calories" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="250" sectionHeaderHeight="28" sectionFooterHeight="28" id="sZg-Wd-jam">
+                <tableViewController id="Ue3-S2-HX8" customClass="MainMenuViewController" customModule="KnowYourWeight" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" allowsSelection="NO" rowHeight="250" sectionHeaderHeight="28" sectionFooterHeight="28" id="sZg-Wd-jam">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sUf-L2-h6z" id="wnp-E4-HrA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="vZw-yj-LeZ">
@@ -35,15 +35,21 @@
                                                         <constraint firstAttribute="width" constant="151" id="uZS-2C-aJ8"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42F-aJ-Nr8">
-                                                    <rect key="frame" x="175" y="35.5" width="180" height="149"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42F-aJ-Nr8">
+                                                    <rect key="frame" x="166" y="36" width="201" height="149"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="149" id="TFf-Od-q7O"/>
-                                                        <constraint firstAttribute="width" constant="180" id="lr3-4e-Dkw"/>
+                                                        <constraint firstAttribute="width" constant="201" id="lr3-4e-Dkw"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="40"/>
-                                                    <state key="normal" title="Calculate">
-                                                        <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Health calculation">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="38" name="AmericanTypewriter-Semibold"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                     </state>
                                                     <connections>
                                                         <segue destination="DAQ-MP-F5N" kind="show" identifier="segueToCalculateScreen" id="YQ7-SW-kqo"/>
@@ -53,7 +59,7 @@
                                             <constraints>
                                                 <constraint firstItem="vZw-yj-LeZ" firstAttribute="centerY" secondItem="wnp-E4-HrA" secondAttribute="centerY" id="A04-ts-Hek"/>
                                                 <constraint firstItem="vZw-yj-LeZ" firstAttribute="leading" secondItem="wnp-E4-HrA" secondAttribute="leadingMargin" constant="8" id="XUv-K2-sU4"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="42F-aJ-Nr8" secondAttribute="trailing" constant="12" id="bDg-h5-2NT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="42F-aJ-Nr8" secondAttribute="trailing" id="bDg-h5-2NT"/>
                                                 <constraint firstItem="42F-aJ-Nr8" firstAttribute="centerY" secondItem="wnp-E4-HrA" secondAttribute="centerY" id="h9c-EE-zsW"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -62,7 +68,7 @@
                                         <rect key="frame" x="0.0" y="220" width="375" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6on-oq-vDd" id="zAy-25-EVE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="poR-4Z-BgA">
@@ -100,7 +106,7 @@
                                         <rect key="frame" x="0.0" y="440" width="375" height="226"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ryn-fK-0C7" id="hDh-Rc-D3E">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="226"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="225.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMb-pS-NrM">
@@ -141,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="852" y="752.47376311844084"/>
         </scene>
-        <!--View Controller-->
+        <!--Health Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculationScreenViewController" customModule="KnowYourWeight" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -238,7 +244,7 @@
                             <constraint firstItem="ygk-F9-UJq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5" id="sJv-1z-oO6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="I5f-ar-0jh">
+                    <navigationItem key="navigationItem" title="Health Calculator" id="I5f-ar-0jh">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="yYI-Dd-ixr">
                             <connections>
                                 <action selector="backButton:" destination="BYZ-38-t0r" id="L7Y-ps-N52"/>
@@ -262,7 +268,7 @@
         <!--Your personal information-->
         <scene sceneID="dB3-KL-Zga">
             <objects>
-                <viewController id="5wC-ZS-VoL" customClass="DetailedViewController" customModule="calories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5wC-ZS-VoL" customClass="DetailedViewController" customModule="KnowYourWeight" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eds-PI-VJh"/>
                         <viewControllerLayoutGuide type="bottom" id="BOG-au-kD2"/>
@@ -377,7 +383,7 @@ ideal weight is:</string>
         <!--Search recipes-->
         <scene sceneID="f3K-x6-zxS">
             <objects>
-                <viewController id="m7a-5r-jTv" customClass="RecipeSearchViewController" customModule="calories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="m7a-5r-jTv" customClass="RecipeSearchViewController" customModule="KnowYourWeight" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BmB-7a-lFG"/>
                         <viewControllerLayoutGuide type="bottom" id="sxg-ql-MCQ"/>
@@ -392,16 +398,6 @@ ideal weight is:</string>
                                     <constraint firstAttribute="height" constant="128" id="2XI-gG-y0x"/>
                                 </constraints>
                             </imageView>
-                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awH-QV-eR5">
-                                <rect key="frame" x="28" y="374" width="320" height="116"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="116" id="uNZ-i7-cM3"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="m7a-5r-jTv" id="cXK-06-MYu"/>
-                                    <outlet property="delegate" destination="m7a-5r-jTv" id="LbA-xm-Kiz"/>
-                                </connections>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum calories per recipe:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiq-Uh-zQr">
                                 <rect key="frame" x="12" y="218" width="225" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -426,53 +422,168 @@ ideal weight is:</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZy-R4-Xn8">
-                                <rect key="frame" x="164" y="508" width="48" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your diet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMa-j7-Lzq">
+                                <rect key="frame" x="16" y="283" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUf-XM-ppD" customClass="dietButtonView" customModule="KnowYourWeight">
+                                <rect key="frame" x="16" y="312" width="343" height="75"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food-pyramid1" highlightedImage="banana" translatesAutoresizingMaskIntoConstraints="NO" id="ZGy-hm-9UO">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="75"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeT-3h-PT9">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="75"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                        <state key="normal" title="Balanced">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dietButtonPressed:" destination="m7a-5r-jTv" eventType="touchUpInside" id="AbV-wh-fJ4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="gDg-eV-5f1"/>
+                                    <constraint firstItem="ZGy-hm-9UO" firstAttribute="leading" secondItem="ZUf-XM-ppD" secondAttribute="leading" id="1hV-c3-MbK"/>
+                                    <constraint firstItem="HeT-3h-PT9" firstAttribute="centerX" secondItem="ZUf-XM-ppD" secondAttribute="centerX" id="27E-F7-S4f"/>
+                                    <constraint firstAttribute="trailing" secondItem="HeT-3h-PT9" secondAttribute="trailing" id="BJi-Bn-c12"/>
+                                    <constraint firstAttribute="height" constant="75" id="BdH-Sz-BAO"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZGy-hm-9UO" secondAttribute="bottom" id="Fp7-sK-BvR"/>
+                                    <constraint firstAttribute="bottom" secondItem="HeT-3h-PT9" secondAttribute="bottom" id="SpW-dn-BU9"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZGy-hm-9UO" secondAttribute="trailing" id="alH-do-Fbb"/>
+                                    <constraint firstItem="HeT-3h-PT9" firstAttribute="top" secondItem="ZUf-XM-ppD" secondAttribute="top" id="ivH-Sk-p86"/>
+                                    <constraint firstItem="HeT-3h-PT9" firstAttribute="leading" secondItem="ZUf-XM-ppD" secondAttribute="leading" id="j0g-r9-0Il"/>
+                                    <constraint firstItem="ZGy-hm-9UO" firstAttribute="top" secondItem="ZUf-XM-ppD" secondAttribute="top" id="oQj-Ih-51Z"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gs-JZ-XhI" customClass="dietButtonView" customModule="KnowYourWeight" customModuleProvider="target">
+                                <rect key="frame" x="16" y="395" width="343" height="75"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food-pyramid2" translatesAutoresizingMaskIntoConstraints="NO" id="rYQ-jh-wJo">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="1n6-tH-S5b"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRW-Va-Tet">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="tBM-Yc-Wh9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                        <state key="normal" title="High-protein">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dietButtonPressed:" destination="m7a-5r-jTv" eventType="touchUpInside" id="x6h-0I-uVj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="RRW-Va-Tet" firstAttribute="leading" secondItem="2gs-JZ-XhI" secondAttribute="leading" id="J3s-Jg-TOf"/>
+                                    <constraint firstAttribute="trailing" secondItem="rYQ-jh-wJo" secondAttribute="trailing" id="NzN-Xr-9cs"/>
+                                    <constraint firstAttribute="trailing" secondItem="RRW-Va-Tet" secondAttribute="trailing" id="S6W-wr-FrR"/>
+                                    <constraint firstItem="RRW-Va-Tet" firstAttribute="top" secondItem="2gs-JZ-XhI" secondAttribute="top" id="ZFS-Rz-cpJ"/>
+                                    <constraint firstItem="RRW-Va-Tet" firstAttribute="centerX" secondItem="2gs-JZ-XhI" secondAttribute="centerX" id="aqY-20-lSd"/>
+                                    <constraint firstItem="rYQ-jh-wJo" firstAttribute="leading" secondItem="2gs-JZ-XhI" secondAttribute="leading" id="hLv-sV-hUu"/>
+                                    <constraint firstAttribute="trailing" secondItem="rYQ-jh-wJo" secondAttribute="trailing" id="jFs-QH-Zpf"/>
+                                    <constraint firstAttribute="height" constant="75" id="ocd-xN-bgb"/>
+                                    <constraint firstItem="rYQ-jh-wJo" firstAttribute="top" secondItem="2gs-JZ-XhI" secondAttribute="top" id="pjn-uP-gMF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-MH-XrQ" customClass="dietButtonView" customModule="KnowYourWeight" customModuleProvider="target">
+                                <rect key="frame" x="16" y="478" width="343" height="75"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food-pyramid3" translatesAutoresizingMaskIntoConstraints="NO" id="yGT-ZK-EeZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="75"/>
+                                        <color key="tintColor" red="0.0" green="1" blue="0.051516517996788025" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="DAo-Kd-QXJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0a-cX-0af">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="Qi6-iY-B5p"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                        <state key="normal" title="Low-fat">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dietButtonPressed:" destination="m7a-5r-jTv" eventType="touchUpInside" id="6ul-ck-cL5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="W0a-cX-0af" firstAttribute="centerX" secondItem="cdi-MH-XrQ" secondAttribute="centerX" id="4Wg-4z-S1l"/>
+                                    <constraint firstAttribute="trailing" secondItem="W0a-cX-0af" secondAttribute="trailing" id="7fh-9h-a4U"/>
+                                    <constraint firstItem="yGT-ZK-EeZ" firstAttribute="leading" secondItem="cdi-MH-XrQ" secondAttribute="leading" id="Kwf-OE-rba"/>
+                                    <constraint firstAttribute="trailing" secondItem="yGT-ZK-EeZ" secondAttribute="trailing" id="QIO-Ju-A35"/>
+                                    <constraint firstAttribute="height" constant="75" id="WON-xM-mSg"/>
+                                    <constraint firstItem="W0a-cX-0af" firstAttribute="top" secondItem="cdi-MH-XrQ" secondAttribute="top" id="e6L-nk-fWB"/>
+                                    <constraint firstItem="W0a-cX-0af" firstAttribute="leading" secondItem="cdi-MH-XrQ" secondAttribute="leading" id="kIZ-2C-tfs"/>
+                                    <constraint firstItem="yGT-ZK-EeZ" firstAttribute="top" secondItem="cdi-MH-XrQ" secondAttribute="top" id="n0i-1k-Ken"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="R8Q-Ct-wwu">
+                                <rect key="frame" x="16" y="583" width="242" height="29"/>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Vegan"/>
+                                    <segment title="Vegeterian"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZy-R4-Xn8">
+                                <rect key="frame" x="278" y="582" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="searchBtnPressed:" destination="m7a-5r-jTv" eventType="touchUpInside" id="2C7-Ti-855"/>
-                                    <segue destination="1Iu-DT-h7u" kind="show" identifier="recipeListSegue" id="K9e-e6-64u"/>
                                 </connections>
                             </button>
-                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-n9-id1">
-                                <rect key="frame" x="134" y="584" width="108" height="3"/>
-                                <color key="progressTintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="trackTintColor" red="1" green="0.82094460959445836" blue="0.74375017296190427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncI-pB-fko">
-                                <rect key="frame" x="118" y="318" width="140" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Select your diet"/>
-                                <connections>
-                                    <action selector="selectDietBtnPressed:" destination="m7a-5r-jTv" eventType="touchUpInside" id="7Q3-ML-n9O"/>
-                                </connections>
-                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="X03-xx-Fk8">
+                                <rect key="frame" x="178" y="637" width="20" height="20"/>
+                                <color key="color" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="aMa-j7-Lzq" firstAttribute="leading" secondItem="ced-TO-5hi" secondAttribute="leadingMargin" id="19e-KI-qCi"/>
+                            <constraint firstItem="2gs-JZ-XhI" firstAttribute="trailing" secondItem="ced-TO-5hi" secondAttribute="trailingMargin" id="1Yp-Nx-wLX"/>
+                            <constraint firstItem="aMa-j7-Lzq" firstAttribute="top" secondItem="ZLh-Wz-Blb" secondAttribute="bottom" constant="6" id="4CG-fo-Ggy"/>
+                            <constraint firstItem="VZy-R4-Xn8" firstAttribute="top" secondItem="cdi-MH-XrQ" secondAttribute="bottom" constant="29" id="5Ts-M2-8dE"/>
                             <constraint firstItem="ZLh-Wz-Blb" firstAttribute="leading" secondItem="ced-TO-5hi" secondAttribute="leadingMargin" constant="-4" id="6q7-pm-x47"/>
                             <constraint firstItem="FwD-Cb-6LG" firstAttribute="leading" secondItem="kiq-Uh-zQr" secondAttribute="trailing" constant="7.5" id="Ce0-PK-v7h"/>
+                            <constraint firstItem="VZy-R4-Xn8" firstAttribute="centerX" secondItem="ced-TO-5hi" secondAttribute="centerX" constant="114.5" id="CnJ-4A-TLQ"/>
+                            <constraint firstItem="R8Q-Ct-wwu" firstAttribute="top" secondItem="cdi-MH-XrQ" secondAttribute="bottom" constant="30" id="Cqy-Cj-jD3"/>
                             <constraint firstItem="ZLh-Wz-Blb" firstAttribute="top" secondItem="FwD-Cb-6LG" secondAttribute="bottom" constant="8" id="Gch-uY-Xph"/>
                             <constraint firstItem="kiq-Uh-zQr" firstAttribute="leading" secondItem="ced-TO-5hi" secondAttribute="leadingMargin" constant="-4" id="M86-gR-zkr"/>
-                            <constraint firstItem="z8g-n9-id1" firstAttribute="top" secondItem="VZy-R4-Xn8" secondAttribute="bottom" constant="46" id="Mtm-wn-QU0"/>
-                            <constraint firstItem="awH-QV-eR5" firstAttribute="centerX" secondItem="ced-TO-5hi" secondAttribute="centerX" id="Q0t-Cj-BDO"/>
+                            <constraint firstItem="cdi-MH-XrQ" firstAttribute="top" secondItem="2gs-JZ-XhI" secondAttribute="bottom" constant="8" id="MGY-bx-9f4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="035-LH-T6J" secondAttribute="trailing" constant="-4" id="THQ-jU-FKv"/>
                             <constraint firstItem="kiq-Uh-zQr" firstAttribute="top" secondItem="035-LH-T6J" secondAttribute="bottom" constant="26" id="TKW-Gj-GAO"/>
+                            <constraint firstItem="ZUf-XM-ppD" firstAttribute="leading" secondItem="ced-TO-5hi" secondAttribute="leadingMargin" id="Uxw-IC-08T"/>
+                            <constraint firstItem="2gs-JZ-XhI" firstAttribute="leading" secondItem="ced-TO-5hi" secondAttribute="leadingMargin" id="WLw-L4-JHc"/>
+                            <constraint firstItem="2gs-JZ-XhI" firstAttribute="trailing" secondItem="ced-TO-5hi" secondAttribute="trailingMargin" id="WTS-fE-5hN"/>
+                            <constraint firstItem="2gs-JZ-XhI" firstAttribute="top" secondItem="ZUf-XM-ppD" secondAttribute="bottom" constant="8" id="Wf0-xU-jJv"/>
+                            <constraint firstItem="cdi-MH-XrQ" firstAttribute="leading" secondItem="ced-TO-5hi" secondAttribute="leadingMargin" id="XTs-ZB-00a"/>
+                            <constraint firstItem="cdi-MH-XrQ" firstAttribute="trailing" secondItem="ced-TO-5hi" secondAttribute="trailingMargin" id="YJy-RQ-URe"/>
                             <constraint firstItem="ZLh-Wz-Blb" firstAttribute="trailing" secondItem="ced-TO-5hi" secondAttribute="trailingMargin" constant="4" id="Z3H-Ru-L7p"/>
                             <constraint firstItem="035-LH-T6J" firstAttribute="leading" secondItem="ced-TO-5hi" secondAttribute="leadingMargin" constant="-4" id="ZK7-Bn-7iT"/>
-                            <constraint firstItem="z8g-n9-id1" firstAttribute="centerX" secondItem="ced-TO-5hi" secondAttribute="centerX" id="csK-6d-Z0R"/>
-                            <constraint firstItem="ncI-pB-fko" firstAttribute="top" secondItem="ZLh-Wz-Blb" secondAttribute="bottom" constant="41" id="e4S-p6-EI4"/>
-                            <constraint firstItem="z8g-n9-id1" firstAttribute="leading" secondItem="ced-TO-5hi" secondAttribute="leadingMargin" constant="118" id="hnm-2v-3Zu"/>
-                            <constraint firstItem="ncI-pB-fko" firstAttribute="centerX" secondItem="ced-TO-5hi" secondAttribute="centerX" id="lRx-Ij-Evi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="z8g-n9-id1" secondAttribute="trailing" constant="117" id="pSH-rt-pf7"/>
-                            <constraint firstItem="VZy-R4-Xn8" firstAttribute="top" secondItem="awH-QV-eR5" secondAttribute="bottom" constant="18" id="rLx-O8-FmL"/>
-                            <constraint firstItem="VZy-R4-Xn8" firstAttribute="centerX" secondItem="ced-TO-5hi" secondAttribute="centerX" id="tjY-YE-n7O"/>
+                            <constraint firstItem="aMa-j7-Lzq" firstAttribute="trailing" secondItem="ced-TO-5hi" secondAttribute="trailingMargin" id="aMp-SW-EYt"/>
+                            <constraint firstItem="2gs-JZ-XhI" firstAttribute="leading" secondItem="ced-TO-5hi" secondAttribute="leadingMargin" id="cEX-aJ-jTV"/>
+                            <constraint firstItem="sxg-ql-MCQ" firstAttribute="top" secondItem="X03-xx-Fk8" secondAttribute="bottom" constant="10" id="cPc-ST-750"/>
+                            <constraint firstItem="X03-xx-Fk8" firstAttribute="centerX" secondItem="ced-TO-5hi" secondAttribute="centerX" id="cd1-fL-0eb"/>
+                            <constraint firstItem="ZUf-XM-ppD" firstAttribute="trailing" secondItem="ced-TO-5hi" secondAttribute="trailingMargin" id="dPd-rh-Dp3"/>
+                            <constraint firstItem="ZUf-XM-ppD" firstAttribute="top" secondItem="ZLh-Wz-Blb" secondAttribute="bottom" constant="35" id="gPZ-rz-yId"/>
+                            <constraint firstItem="R8Q-Ct-wwu" firstAttribute="leading" secondItem="ced-TO-5hi" secondAttribute="leadingMargin" id="j0K-cZ-orN"/>
                             <constraint firstItem="035-LH-T6J" firstAttribute="top" secondItem="BmB-7a-lFG" secondAttribute="bottom" id="uKG-GT-HXl"/>
                             <constraint firstItem="FwD-Cb-6LG" firstAttribute="top" secondItem="035-LH-T6J" secondAttribute="bottom" constant="26" id="wgq-xE-Bzi"/>
-                            <constraint firstItem="awH-QV-eR5" firstAttribute="top" secondItem="ncI-pB-fko" secondAttribute="bottom" constant="20" id="xqc-nE-2Kv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search recipes" id="ejU-Up-aMp">
@@ -483,31 +594,34 @@ ideal weight is:</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="dietPicker" destination="awH-QV-eR5" id="zKH-w3-E7M"/>
+                        <outlet property="activityIndicator" destination="X03-xx-Fk8" id="Azj-zk-lFl"/>
+                        <outlet property="balancedDietButtonView" destination="ZUf-XM-ppD" id="QCE-TX-J3H"/>
+                        <outlet property="healthSegmentedControl" destination="R8Q-Ct-wwu" id="I0A-Ap-ogS"/>
+                        <outlet property="highProteinDietButtonView" destination="2gs-JZ-XhI" id="CJu-nH-Eu2"/>
+                        <outlet property="lowFatDietButtonView" destination="cdi-MH-XrQ" id="bHD-qc-sEl"/>
                         <outlet property="maximumCaloriesPerRecipeLabel" destination="FwD-Cb-6LG" id="6Dg-ku-0yt"/>
-                        <outlet property="progressBar" destination="z8g-n9-id1" id="jdv-e0-Bqb"/>
                         <outlet property="searchBtn" destination="VZy-R4-Xn8" id="yNj-TU-tsP"/>
-                        <outlet property="selectDietBtn" destination="ncI-pB-fko" id="71s-va-BL2"/>
+                        <segue destination="1Iu-DT-h7u" kind="show" identifier="goToRecipeList" id="wYT-gB-KCS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xs3-b2-TrN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3386" y="754"/>
+            <point key="canvasLocation" x="3384.8000000000002" y="753.37331334332839"/>
         </scene>
         <!--Recipe List Table View Controller-->
         <scene sceneID="bGg-SJ-Hxf">
             <objects>
-                <tableViewController id="1Iu-DT-h7u" customClass="RecipeListTableViewController" customModule="calories" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="1Iu-DT-h7u" customClass="RecipeListTableViewController" customModule="KnowYourWeight" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" sectionHeaderHeight="28" sectionFooterHeight="28" id="1a4-rM-pzO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="recipeNameCell" rowHeight="150" id="geh-qR-OBg" customClass="recipeListCell" customModule="calories" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="recipeNameCell" rowHeight="150" id="geh-qR-OBg" customClass="recipeListCell" customModule="KnowYourWeight" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="geh-qR-OBg" id="0kH-Wz-D09">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="149"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EV6-Gq-28k">
@@ -545,7 +659,7 @@ ideal weight is:</string>
         <!--Recipe View Controller-->
         <scene sceneID="i82-jr-9iT">
             <objects>
-                <viewController id="mCi-7E-3qG" customClass="RecipeViewController" customModule="calories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mCi-7E-3qG" customClass="RecipeViewController" customModule="KnowYourWeight" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ym5-Ik-ScS"/>
                         <viewControllerLayoutGuide type="bottom" id="jvE-m9-qae"/>
@@ -555,13 +669,13 @@ ideal weight is:</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H8E-I2-Tle">
-                                <rect key="frame" x="16" y="64" width="343" height="152"/>
+                                <rect key="frame" x="16" y="64" width="343" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="152" id="2nx-Uo-xAg"/>
+                                    <constraint firstAttribute="height" constant="128" id="2nx-Uo-xAg"/>
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYA-dH-OI0">
-                                <rect key="frame" x="16" y="224" width="343" height="443"/>
+                                <rect key="frame" x="16" y="200" width="343" height="467"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0e-ct-cq8">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="0.0"/>
@@ -669,5 +783,8 @@ ideal weight is:</string>
         <image name="best-food" width="539" height="307"/>
         <image name="cross" width="193" height="194"/>
         <image name="cross.png" width="193" height="194"/>
+        <image name="food-pyramid1" width="806" height="267"/>
+        <image name="food-pyramid2" width="806" height="267"/>
+        <image name="food-pyramid3" width="806" height="267"/>
     </resources>
 </document>

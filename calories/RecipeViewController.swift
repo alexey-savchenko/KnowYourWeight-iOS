@@ -11,6 +11,7 @@ import Foundation
 import SwiftyJSON
 
 class RecipeViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let _recipe = selectedRecipe {
@@ -27,7 +28,6 @@ class RecipeViewController: UIViewController {
             for item in _recipe.healthLabels{
                 healthLabels.text! += "\(item); "
             }
-            
             sourceLabel.text = "Provided by: \(_recipe.source)"
         }
     }
@@ -47,9 +47,7 @@ class RecipeViewController: UIViewController {
             return URL(string: (selectedRecipe?.URL)!)!
         }
     }
-    
-    
-    
+
     var selectedRecipe: Recipe?
     
     //MARK: METHODS
