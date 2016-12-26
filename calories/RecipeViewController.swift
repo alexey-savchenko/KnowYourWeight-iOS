@@ -8,14 +8,14 @@
 
 import UIKit
 import Foundation
-import SwiftyJSON
+import CoreData
 
 class RecipeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let _recipe = selectedRecipe {
-            
+        
             recipeTitle.text = _recipe.label
             
             let imageURL = _recipe.image
@@ -50,6 +50,8 @@ class RecipeViewController: UIViewController {
 
     var selectedRecipe: Recipe?
     
+    
+    
     //MARK: METHODS
     
     @IBAction func gotoRecipeURL(_ sender: UIButton) {
@@ -57,4 +59,22 @@ class RecipeViewController: UIViewController {
         
     }
     
+    @IBAction func saveRecipe(_ sender: UIBarButtonItem) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let recipeToSave = SavedRecipe(context: context)
+        
+        recipeToSave.ingredients = ingredients.text
+        recipeToSave.title = recipeTitle.text
+        
+        if let saveImage = UIImagePNGRepresentation(recipeImage.image!)! as NSData?{
+            recipeToSave.image = saveImage
+        }
+        
+        
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        
+    }
 }

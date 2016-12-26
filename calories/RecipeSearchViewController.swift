@@ -120,6 +120,9 @@ class RecipeSearchViewController: UIViewController{
     func makeEndPoint() -> String{
         return "https://api.edamam.com/search?q=&app_id=\(Recipe.edamamAppId)&app_key=\(Recipe.edamamAppKey)&from=0&to=75&diet=\(selectedDiet!)&calories=lte%20\(maximumCaloriesPerRecipeLabel.text!)&health=\(self.selectedHealthOption)"
     }
+    @IBAction func goToSavedRecipesList(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "toSavedRecipes", sender: self)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToRecipeList"{

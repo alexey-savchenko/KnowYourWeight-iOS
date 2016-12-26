@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		218FCEDC5BCC7313A632B52C /* Pods_calories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0BF1B8A76D7B06786D4DCF /* Pods_calories.framework */; };
 		800E7F611DDDD1E300A6A612 /* RecipeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800E7F601DDDD1E300A6A612 /* RecipeListTableViewController.swift */; };
-		803E43291DE55EC600687B0B /* sampleResponse in Resources */ = {isa = PBXBuildFile; fileRef = 803E43281DE55EC600687B0B /* sampleResponse */; };
+		801072D81E1061DA00D6DF3F /* RecipeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 801072D61E1061DA00D6DF3F /* RecipeModel.xcdatamodeld */; };
 		803E432C1DE5C33900687B0B /* recipeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803E432B1DE5C33900687B0B /* recipeListCell.swift */; };
 		803E432E1DE6288500687B0B /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803E432D1DE6288500687B0B /* RecipeViewController.swift */; };
 		804176601DBF78A500506B53 /* DetailedInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8041765F1DBF78A500506B53 /* DetailedInformationViewController.swift */; };
@@ -22,14 +22,15 @@
 		80730BFE1DBE7B1500133136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80730BFD1DBE7B1500133136 /* Assets.xcassets */; };
 		80730C011DBE7B1500133136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80730BFF1DBE7B1500133136 /* LaunchScreen.storyboard */; };
 		807384241DFA76CE00B80E98 /* dietButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807384231DFA76CE00B80E98 /* dietButtonView.swift */; };
-		80F480501DC1E95900F0A3DD /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 80F4804F1DC1E95900F0A3DD /* cross.png */; };
+		809124C11E11442A00B65499 /* SavedRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809124C01E11442A00B65499 /* SavedRecipeViewController.swift */; };
 		80FEA1771DD4A2FD0068858D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FEA1761DD4A2FD0068858D /* Recipe.swift */; };
+		80FF56D11E0070960088F187 /* SavedRecipeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FF56CD1E0064800088F187 /* SavedRecipeListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6440474D5296527B200FE46C /* Pods-calories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calories.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calories/Pods-calories.debug.xcconfig"; sourceTree = "<group>"; };
 		800E7F601DDDD1E300A6A612 /* RecipeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewController.swift; sourceTree = "<group>"; };
-		803E43281DE55EC600687B0B /* sampleResponse */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleResponse; sourceTree = "<group>"; };
+		801072D71E1061DA00D6DF3F /* RecipeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipeModel.xcdatamodel; sourceTree = "<group>"; };
 		803E432B1DE5C33900687B0B /* recipeListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeListCell.swift; sourceTree = "<group>"; };
 		803E432D1DE6288500687B0B /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		8041765F1DBF78A500506B53 /* DetailedInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedInformationViewController.swift; sourceTree = "<group>"; };
@@ -44,10 +45,11 @@
 		80730C001DBE7B1500133136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80730C021DBE7B1500133136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		807384231DFA76CE00B80E98 /* dietButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dietButtonView.swift; sourceTree = "<group>"; };
+		809124C01E11442A00B65499 /* SavedRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedRecipeViewController.swift; sourceTree = "<group>"; };
 		80E965DF1DF7209600BFEF1E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/calories-bssyebfbvgszcwcfovltwxedyxgq/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		80E965E11DF7209A00BFEF1E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/calories-bssyebfbvgszcwcfovltwxedyxgq/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
-		80F4804F1DC1E95900F0A3DD /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		80FEA1761DD4A2FD0068858D /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		80FF56CD1E0064800088F187 /* SavedRecipeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedRecipeListTableViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		A28E8E1771C014A46C3068F1 /* Pods-calories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calories.release.xcconfig"; path = "Pods/Target Support Files/Pods-calories/Pods-calories.release.xcconfig"; sourceTree = "<group>"; };
 		DC0BF1B8A76D7B06786D4DCF /* Pods_calories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +86,8 @@
 				805719911DD21A9D006A1468 /* RecipeSearchViewController.swift */,
 				800E7F601DDDD1E300A6A612 /* RecipeListTableViewController.swift */,
 				803E432D1DE6288500687B0B /* RecipeViewController.swift */,
+				80FF56CD1E0064800088F187 /* SavedRecipeListTableViewController.swift */,
+				809124C01E11442A00B65499 /* SavedRecipeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -118,14 +122,13 @@
 		80730BF51DBE7B1500133136 /* calories */ = {
 			isa = PBXGroup;
 			children = (
-				803E432A1DE5C2FE00687B0B /* Views */,
-				80F4804F1DC1E95900F0A3DD /* cross.png */,
+				801072D61E1061DA00D6DF3F /* RecipeModel.xcdatamodeld */,
 				80730BF61DBE7B1500133136 /* AppDelegate.swift */,
+				803E432A1DE5C2FE00687B0B /* Views */,
 				8057198F1DD21A27006A1468 /* ViewControllers */,
-				803E43281DE55EC600687B0B /* sampleResponse */,
+				805719901DD21A36006A1468 /* Models */,
 				80730BFD1DBE7B1500133136 /* Assets.xcassets */,
 				80730C021DBE7B1500133136 /* Info.plist */,
-				805719901DD21A36006A1468 /* Models */,
 			);
 			path = calories;
 			sourceTree = "<group>";
@@ -179,7 +182,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Alexey Savchenko";
 				TargetAttributes = {
 					80730BF21DBE7B1500133136 = {
@@ -212,10 +215,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				803E43291DE55EC600687B0B /* sampleResponse in Resources */,
 				80730C011DBE7B1500133136 /* LaunchScreen.storyboard in Resources */,
 				80730BFE1DBE7B1500133136 /* Assets.xcassets in Resources */,
-				80F480501DC1E95900F0A3DD /* cross.png in Resources */,
 				80730BFC1DBE7B1500133136 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,9 +277,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				80730BF91DBE7B1500133136 /* CalculationScreenViewController.swift in Sources */,
+				801072D81E1061DA00D6DF3F /* RecipeModel.xcdatamodeld in Sources */,
+				809124C11E11442A00B65499 /* SavedRecipeViewController.swift in Sources */,
 				800E7F611DDDD1E300A6A612 /* RecipeListTableViewController.swift in Sources */,
 				807384241DFA76CE00B80E98 /* dietButtonView.swift in Sources */,
 				805719921DD21A9D006A1468 /* RecipeSearchViewController.swift in Sources */,
+				80FF56D11E0070960088F187 /* SavedRecipeListTableViewController.swift in Sources */,
 				80FEA1771DD4A2FD0068858D /* Recipe.swift in Sources */,
 				803E432E1DE6288500687B0B /* RecipeViewController.swift in Sources */,
 				8057198E1DD0B38E006A1468 /* MainMenuViewController.swift in Sources */,
@@ -464,6 +468,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		801072D61E1061DA00D6DF3F /* RecipeModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				801072D71E1061DA00D6DF3F /* RecipeModel.xcdatamodel */,
+			);
+			currentVersion = 801072D71E1061DA00D6DF3F /* RecipeModel.xcdatamodel */;
+			path = RecipeModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 80730BEB1DBE7B1500133136 /* Project object */;
 }
