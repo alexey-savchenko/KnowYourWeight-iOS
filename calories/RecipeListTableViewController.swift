@@ -33,7 +33,6 @@ class RecipeListTableViewController: UITableViewController {
                                      healthLabels: unprocessedRecipe["healthLabels"].arrayObject! as! [String],
                                      image: URL(string: unprocessedRecipe["image"].string!)!
             )
-            print("\n\(localRecipe)\n")
             recipeArray.append(localRecipe)
         }
     }
@@ -57,7 +56,7 @@ class RecipeListTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "recipeNameCell", for: indexPath) as! recipeListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as! recipeListCell
         
         // if image for IndexPath in chache load image from chache
         if imgChache.allKeys.contains(where: {$0 as! Int == indexPath.row}){

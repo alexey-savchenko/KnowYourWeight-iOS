@@ -23,7 +23,7 @@ enum Gender: String {
 }
 
 class Person {
-    //var condition: Condition
+    
     var gender: Gender
     var weight: Int
     var height: Int
