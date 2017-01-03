@@ -9,35 +9,35 @@
 import UIKit
 
 class SavedRecipeViewController: UIViewController {
-    
-    //MARK: Properities
-    var recipe: SavedRecipe?
-    
-    var url: URL{
-        get{
-            return URL(string: (recipe?.url)!)!
-        }
+  
+  //MARK: Properities
+  var recipe: SavedRecipe?
+  
+  var url: URL{
+    get{
+      return URL(string: (recipe?.url)!)!
     }
+  }
+  
+  //MARK: Outlets
+  @IBOutlet weak var recipeImage: UIImageView!
+  @IBOutlet weak var recipeTitle: UILabel!
+  @IBOutlet weak var ingredients: UILabel!
+  
+  
+  
+  
+  //MARK: Methods
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-    //MARK: Outlets
-    @IBOutlet weak var recipeImage: UIImageView!
-    @IBOutlet weak var recipeTitle: UILabel!
-    @IBOutlet weak var ingredients: UILabel!
+    recipeImage.image = UIImage(data: (recipe?.image)! as Data)
+    recipeTitle.text = recipe?.title!
+    ingredients.text = recipe?.ingredients!
     
-    
-    
-    
-    //MARK: Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        recipeImage.image = UIImage(data: (recipe?.image)! as Data)
-        recipeTitle.text = recipe?.title!
-        ingredients.text = recipe?.ingredients!
-        
-    }
-
-    @IBAction func openSourceURL(_ sender: UIButton) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-    }
+  }
+  
+  @IBAction func openSourceURL(_ sender: UIButton) {
+    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+  }
 }

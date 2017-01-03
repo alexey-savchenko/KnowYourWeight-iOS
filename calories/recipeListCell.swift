@@ -9,26 +9,27 @@
 import UIKit
 
 class recipeListCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    // Initialization code
+  }
+  
+  
+  // MARK: PROPERTIES
+  
+  @IBOutlet weak var recipeLabel: UILabel!
+  @IBOutlet weak var recipeImage: UIImageView!
+  @IBOutlet weak var contentProviderLabel: UILabel!
+  
+  
+  
+  // MARK: METHODS
+  
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
     
-    // MARK: PROPERTIES
-    
-    @IBOutlet weak var recipeLabel: UILabel!
-    @IBOutlet weak var recipeImage: UIImageView!
-    
-    
-    
-    // MARK: METHODS
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    // Configure the view for the selected state
+  }
+  
 }

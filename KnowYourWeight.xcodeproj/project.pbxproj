@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		218FCEDC5BCC7313A632B52C /* Pods_calories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0BF1B8A76D7B06786D4DCF /* Pods_calories.framework */; };
+		80041E1E1E1AEC5200B7EC55 /* VideoTypeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80041E1D1E1AEC5200B7EC55 /* VideoTypeSelectViewController.swift */; };
+		80041E201E1AEF2200B7EC55 /* VideoPlaylistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80041E1F1E1AEF2200B7EC55 /* VideoPlaylistTableViewController.swift */; };
+		80041E241E1B941A00B7EC55 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80041E231E1B941A00B7EC55 /* Video.swift */; };
+		80041E261E1BEE0F00B7EC55 /* VideoPlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80041E251E1BEE0F00B7EC55 /* VideoPlaylistTableViewCell.swift */; };
 		800E7F611DDDD1E300A6A612 /* RecipeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800E7F601DDDD1E300A6A612 /* RecipeListTableViewController.swift */; };
 		801072D81E1061DA00D6DF3F /* RecipeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 801072D61E1061DA00D6DF3F /* RecipeModel.xcdatamodeld */; };
 		803E432C1DE5C33900687B0B /* recipeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803E432B1DE5C33900687B0B /* recipeListCell.swift */; };
@@ -23,12 +27,17 @@
 		80730C011DBE7B1500133136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80730BFF1DBE7B1500133136 /* LaunchScreen.storyboard */; };
 		807384241DFA76CE00B80E98 /* dietButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807384231DFA76CE00B80E98 /* dietButtonView.swift */; };
 		809124C11E11442A00B65499 /* SavedRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809124C01E11442A00B65499 /* SavedRecipeViewController.swift */; };
+		80CC3C891E1C2B25005A864C /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CC3C881E1C2B25005A864C /* VideoViewController.swift */; };
 		80FEA1771DD4A2FD0068858D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FEA1761DD4A2FD0068858D /* Recipe.swift */; };
 		80FF56D11E0070960088F187 /* SavedRecipeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FF56CD1E0064800088F187 /* SavedRecipeListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6440474D5296527B200FE46C /* Pods-calories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calories.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calories/Pods-calories.debug.xcconfig"; sourceTree = "<group>"; };
+		80041E1D1E1AEC5200B7EC55 /* VideoTypeSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTypeSelectViewController.swift; sourceTree = "<group>"; };
+		80041E1F1E1AEF2200B7EC55 /* VideoPlaylistTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlaylistTableViewController.swift; sourceTree = "<group>"; };
+		80041E231E1B941A00B7EC55 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		80041E251E1BEE0F00B7EC55 /* VideoPlaylistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlaylistTableViewCell.swift; sourceTree = "<group>"; };
 		800E7F601DDDD1E300A6A612 /* RecipeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListTableViewController.swift; sourceTree = "<group>"; };
 		801072D71E1061DA00D6DF3F /* RecipeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipeModel.xcdatamodel; sourceTree = "<group>"; };
 		803E432B1DE5C33900687B0B /* recipeListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeListCell.swift; sourceTree = "<group>"; };
@@ -46,6 +55,7 @@
 		80730C021DBE7B1500133136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		807384231DFA76CE00B80E98 /* dietButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dietButtonView.swift; sourceTree = "<group>"; };
 		809124C01E11442A00B65499 /* SavedRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedRecipeViewController.swift; sourceTree = "<group>"; };
+		80CC3C881E1C2B25005A864C /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		80E965DF1DF7209600BFEF1E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/calories-bssyebfbvgszcwcfovltwxedyxgq/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		80E965E11DF7209A00BFEF1E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/calories-bssyebfbvgszcwcfovltwxedyxgq/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		80FEA1761DD4A2FD0068858D /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
@@ -66,6 +76,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80041E1C1E1AD34200B7EC55 /* VideoView */ = {
+			isa = PBXGroup;
+			children = (
+				80041E1D1E1AEC5200B7EC55 /* VideoTypeSelectViewController.swift */,
+				80041E1F1E1AEF2200B7EC55 /* VideoPlaylistTableViewController.swift */,
+				80CC3C881E1C2B25005A864C /* VideoViewController.swift */,
+			);
+			name = VideoView;
+			sourceTree = "<group>";
+		};
 		803E432A1DE5C2FE00687B0B /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +93,7 @@
 				80730BFA1DBE7B1500133136 /* Main.storyboard */,
 				803E432B1DE5C33900687B0B /* recipeListCell.swift */,
 				807384231DFA76CE00B80E98 /* dietButtonView.swift */,
+				80041E251E1BEE0F00B7EC55 /* VideoPlaylistTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -80,14 +101,10 @@
 		8057198F1DD21A27006A1468 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				80730BF81DBE7B1500133136 /* CalculationScreenViewController.swift */,
+				80041E1C1E1AD34200B7EC55 /* VideoView */,
+				809124C31E12598E00B65499 /* RecipeSearch */,
+				809124C21E12597800B65499 /* Calculator */,
 				8057198D1DD0B38E006A1468 /* MainMenuViewController.swift */,
-				8041765F1DBF78A500506B53 /* DetailedInformationViewController.swift */,
-				805719911DD21A9D006A1468 /* RecipeSearchViewController.swift */,
-				800E7F601DDDD1E300A6A612 /* RecipeListTableViewController.swift */,
-				803E432D1DE6288500687B0B /* RecipeViewController.swift */,
-				80FF56CD1E0064800088F187 /* SavedRecipeListTableViewController.swift */,
-				809124C01E11442A00B65499 /* SavedRecipeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -97,6 +114,7 @@
 			children = (
 				804176611DBF97BD00506B53 /* Person.swift */,
 				80FEA1761DD4A2FD0068858D /* Recipe.swift */,
+				80041E231E1B941A00B7EC55 /* Video.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -104,7 +122,7 @@
 		80730BEA1DBE7B1500133136 = {
 			isa = PBXGroup;
 			children = (
-				80730BF51DBE7B1500133136 /* calories */,
+				80730BF51DBE7B1500133136 /* KnowYourWeight */,
 				80730BF41DBE7B1500133136 /* Products */,
 				DE37CF1B64ACD9D3789DE842 /* Pods */,
 				9B3C073656E7FB8BC97576F8 /* Frameworks */,
@@ -119,7 +137,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		80730BF51DBE7B1500133136 /* calories */ = {
+		80730BF51DBE7B1500133136 /* KnowYourWeight */ = {
 			isa = PBXGroup;
 			children = (
 				801072D61E1061DA00D6DF3F /* RecipeModel.xcdatamodeld */,
@@ -130,7 +148,29 @@
 				80730BFD1DBE7B1500133136 /* Assets.xcassets */,
 				80730C021DBE7B1500133136 /* Info.plist */,
 			);
+			name = KnowYourWeight;
 			path = calories;
+			sourceTree = "<group>";
+		};
+		809124C21E12597800B65499 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				80730BF81DBE7B1500133136 /* CalculationScreenViewController.swift */,
+				8041765F1DBF78A500506B53 /* DetailedInformationViewController.swift */,
+			);
+			name = Calculator;
+			sourceTree = "<group>";
+		};
+		809124C31E12598E00B65499 /* RecipeSearch */ = {
+			isa = PBXGroup;
+			children = (
+				805719911DD21A9D006A1468 /* RecipeSearchViewController.swift */,
+				800E7F601DDDD1E300A6A612 /* RecipeListTableViewController.swift */,
+				803E432D1DE6288500687B0B /* RecipeViewController.swift */,
+				80FF56CD1E0064800088F187 /* SavedRecipeListTableViewController.swift */,
+				809124C01E11442A00B65499 /* SavedRecipeViewController.swift */,
+			);
+			name = RecipeSearch;
 			sourceTree = "<group>";
 		};
 		9B3C073656E7FB8BC97576F8 /* Frameworks */ = {
@@ -277,15 +317,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				80730BF91DBE7B1500133136 /* CalculationScreenViewController.swift in Sources */,
+				80041E201E1AEF2200B7EC55 /* VideoPlaylistTableViewController.swift in Sources */,
 				801072D81E1061DA00D6DF3F /* RecipeModel.xcdatamodeld in Sources */,
 				809124C11E11442A00B65499 /* SavedRecipeViewController.swift in Sources */,
 				800E7F611DDDD1E300A6A612 /* RecipeListTableViewController.swift in Sources */,
+				80CC3C891E1C2B25005A864C /* VideoViewController.swift in Sources */,
 				807384241DFA76CE00B80E98 /* dietButtonView.swift in Sources */,
 				805719921DD21A9D006A1468 /* RecipeSearchViewController.swift in Sources */,
+				80041E1E1E1AEC5200B7EC55 /* VideoTypeSelectViewController.swift in Sources */,
 				80FF56D11E0070960088F187 /* SavedRecipeListTableViewController.swift in Sources */,
 				80FEA1771DD4A2FD0068858D /* Recipe.swift in Sources */,
+				80041E261E1BEE0F00B7EC55 /* VideoPlaylistTableViewCell.swift in Sources */,
 				803E432E1DE6288500687B0B /* RecipeViewController.swift in Sources */,
 				8057198E1DD0B38E006A1468 /* MainMenuViewController.swift in Sources */,
+				80041E241E1B941A00B7EC55 /* Video.swift in Sources */,
 				804176621DBF97BD00506B53 /* Person.swift in Sources */,
 				80730BF71DBE7B1500133136 /* AppDelegate.swift in Sources */,
 				804176601DBF78A500506B53 /* DetailedInformationViewController.swift in Sources */,
@@ -421,9 +466,10 @@
 				);
 				INFOPLIST_FILE = calories/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.svchdzgn.calories;
+				PRODUCT_BUNDLE_IDENTIFIER = com.svchdzgn.KnowYourWeight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -440,9 +486,10 @@
 				);
 				INFOPLIST_FILE = calories/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.svchdzgn.calories;
+				PRODUCT_BUNDLE_IDENTIFIER = com.svchdzgn.KnowYourWeight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
