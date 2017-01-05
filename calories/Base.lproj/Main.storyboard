@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sUf-L2-h6z" id="wnp-E4-HrA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="vZw-yj-LeZ">
@@ -68,7 +68,7 @@
                                         <rect key="frame" x="0.0" y="220" width="375" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6on-oq-vDd" id="zAy-25-EVE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="poR-4Z-BgA">
@@ -106,7 +106,7 @@
                                         <rect key="frame" x="0.0" y="440" width="375" height="226"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ryn-fK-0C7" id="hDh-Rc-D3E">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="225.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Xne-Yn-Vxk">
@@ -152,8 +152,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rBs-d6-P7i">
+                                <rect key="frame" x="177" y="627" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barbell-1" translatesAutoresizingMaskIntoConstraints="NO" id="WDe-hw-VcL">
+                                <rect key="frame" x="16" y="72" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSj-ff-3uF">
-                                <rect key="frame" x="16" y="89" width="343" height="80"/>
+                                <rect key="frame" x="16" y="208" width="343" height="80"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="1gK-x4-cOv"/>
@@ -167,7 +174,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWc-Eb-DkH">
-                                <rect key="frame" x="16" y="189" width="343" height="80"/>
+                                <rect key="frame" x="16" y="308" width="343" height="80"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="N8Z-tL-caR"/>
@@ -180,11 +187,8 @@
                                     <action selector="selectBodybuildingVideoPlaylist:" destination="8JD-cF-E0x" eventType="touchUpInside" id="d8n-Vi-ma7"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rBs-d6-P7i">
-                                <rect key="frame" x="177" y="627" width="20" height="20"/>
-                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIH-Zx-WU3">
-                                <rect key="frame" x="16" y="293" width="343" height="80"/>
+                                <rect key="frame" x="16" y="412" width="343" height="80"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="LFT-YV-pzP"/>
@@ -203,7 +207,7 @@
                             <constraint firstItem="SIH-Zx-WU3" firstAttribute="leading" secondItem="WV9-nD-u18" secondAttribute="leadingMargin" id="022-kB-GOa"/>
                             <constraint firstItem="MWc-Eb-DkH" firstAttribute="leading" secondItem="WV9-nD-u18" secondAttribute="leadingMargin" id="Bak-xa-AiU"/>
                             <constraint firstItem="SIH-Zx-WU3" firstAttribute="top" secondItem="MWc-Eb-DkH" secondAttribute="bottom" constant="24" id="CqV-mg-o0B"/>
-                            <constraint firstItem="XSj-ff-3uF" firstAttribute="top" secondItem="fmS-Yx-EaJ" secondAttribute="bottom" constant="25" id="WHr-7L-XQP"/>
+                            <constraint firstItem="XSj-ff-3uF" firstAttribute="top" secondItem="fmS-Yx-EaJ" secondAttribute="bottom" constant="144" id="WHr-7L-XQP"/>
                             <constraint firstItem="rBs-d6-P7i" firstAttribute="centerX" secondItem="WV9-nD-u18" secondAttribute="centerX" id="cvs-Fn-y5Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XSj-ff-3uF" secondAttribute="trailing" id="fpY-Q7-KCz"/>
                             <constraint firstItem="XSj-ff-3uF" firstAttribute="leading" secondItem="WV9-nD-u18" secondAttribute="leadingMargin" id="gA4-5k-iv2"/>
@@ -242,7 +246,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="197"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPe-Ov-aLa" id="Ook-Tl-DBG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="196.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jba-r6-Pkd">
@@ -313,7 +317,7 @@
                                     <constraint firstAttribute="height" constant="180" id="7B6-vS-nTB"/>
                                 </constraints>
                             </webView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDW-du-pWE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="video title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDW-du-pWE">
                                 <rect key="frame" x="16" y="252" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -826,7 +830,7 @@ ideal weight is:</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="geh-qR-OBg" id="0kH-Wz-D09">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EV6-Gq-28k">
@@ -1012,7 +1016,7 @@ ideal weight is:</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="REs-gN-UmV" id="Q0d-ha-J7d">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6y-9N-XhN">
@@ -1144,6 +1148,7 @@ ideal weight is:</string>
     <resources>
         <image name="banana" width="583" height="582"/>
         <image name="barbell" width="200" height="200"/>
+        <image name="barbell-1" width="1440" height="900"/>
         <image name="best-food" width="539" height="307"/>
         <image name="cross" width="193" height="194"/>
         <image name="food-pyramid1" width="806" height="267"/>
