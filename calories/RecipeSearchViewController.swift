@@ -22,6 +22,10 @@ class RecipeSearchViewController: UIViewController{
     
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    self.navigationController?.setNavigationBarHidden(false, animated: true)
+  }
+  
   //MARK: PROPERTIES
   
   @IBOutlet weak var maximumCaloriesPerRecipeLabel: UILabel!

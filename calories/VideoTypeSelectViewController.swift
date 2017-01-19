@@ -23,10 +23,12 @@ class VideoTypeSelectViewController: UIViewController {
   var videoArray: [Video] = [Video]()
 		
   override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
+    
+    self.navigationController?.setNavigationBarHidden(false, animated: true)
     activityIndicator.isHidden = true
     videoArray.removeAll()
   }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     videoArray.removeAll()
@@ -89,8 +91,5 @@ class VideoTypeSelectViewController: UIViewController {
     }
   }
   
-  @IBAction func cancel(_ sender: UIBarButtonItem) {
-    dismiss(animated: true, completion: nil)
-    
-  }
+
 }

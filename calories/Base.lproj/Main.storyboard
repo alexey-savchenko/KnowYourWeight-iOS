@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ue3-S2-HX8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mz2-rm-w6h">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sUf-L2-h6z" id="wnp-E4-HrA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="vZw-yj-LeZ">
@@ -52,7 +52,7 @@
                                                         </attributedString>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="DAQ-MP-F5N" kind="show" identifier="segueToCalculateScreen" id="YQ7-SW-kqo"/>
+                                                        <segue destination="BYZ-38-t0r" kind="show" id="J55-jf-7iR"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -68,7 +68,7 @@
                                         <rect key="frame" x="0.0" y="220" width="375" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6on-oq-vDd" id="zAy-25-EVE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="poR-4Z-BgA">
@@ -81,7 +81,7 @@
                                                         <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="ULY-uU-VB6" kind="show" id="SPD-WI-Rix"/>
+                                                        <segue destination="m7a-5r-jTv" kind="show" id="iHO-9m-Lyx"/>
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banana" translatesAutoresizingMaskIntoConstraints="NO" id="O97-SR-XcN">
@@ -106,7 +106,7 @@
                                         <rect key="frame" x="0.0" y="440" width="375" height="226"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ryn-fK-0C7" id="hDh-Rc-D3E">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="225.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Xne-Yn-Vxk">
@@ -117,7 +117,7 @@
                                                         <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="8LD-ag-1TW" kind="show" id="oUF-bH-ekq"/>
+                                                        <segue destination="8JD-cF-E0x" kind="show" id="j89-4K-ko9"/>
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barbell" translatesAutoresizingMaskIntoConstraints="NO" id="j0k-MH-bQJ">
@@ -135,10 +135,13 @@
                             <outlet property="delegate" destination="Ue3-S2-HX8" id="4xH-WQ-baO"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="cEt-Od-hwJ"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kLH-no-8CA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="752.47376311844084"/>
+            <point key="canvasLocation" x="1791.2" y="752.47376311844084"/>
         </scene>
         <!--Sport videos-->
         <scene sceneID="AJV-Xv-cEl">
@@ -153,11 +156,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rBs-d6-P7i">
-                                <rect key="frame" x="177" y="627" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="627" width="20" height="20"/>
                             </activityIndicatorView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barbell-1" translatesAutoresizingMaskIntoConstraints="NO" id="WDe-hw-VcL">
-                                <rect key="frame" x="16" y="72" width="343" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barbell-1" translatesAutoresizingMaskIntoConstraints="NO" id="WDe-hw-VcL">
+                                <rect key="frame" x="16" y="64" width="343" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="136" id="aWW-1e-Iyl"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSj-ff-3uF">
                                 <rect key="frame" x="16" y="208" width="343" height="80"/>
@@ -207,23 +212,22 @@
                             <constraint firstItem="SIH-Zx-WU3" firstAttribute="leading" secondItem="WV9-nD-u18" secondAttribute="leadingMargin" id="022-kB-GOa"/>
                             <constraint firstItem="MWc-Eb-DkH" firstAttribute="leading" secondItem="WV9-nD-u18" secondAttribute="leadingMargin" id="Bak-xa-AiU"/>
                             <constraint firstItem="SIH-Zx-WU3" firstAttribute="top" secondItem="MWc-Eb-DkH" secondAttribute="bottom" constant="24" id="CqV-mg-o0B"/>
+                            <constraint firstItem="WDe-hw-VcL" firstAttribute="trailing" secondItem="WV9-nD-u18" secondAttribute="trailingMargin" id="JcW-iy-u36"/>
+                            <constraint firstItem="WDe-hw-VcL" firstAttribute="top" secondItem="fmS-Yx-EaJ" secondAttribute="bottom" id="Obz-35-mvZ"/>
                             <constraint firstItem="XSj-ff-3uF" firstAttribute="top" secondItem="fmS-Yx-EaJ" secondAttribute="bottom" constant="144" id="WHr-7L-XQP"/>
                             <constraint firstItem="rBs-d6-P7i" firstAttribute="centerX" secondItem="WV9-nD-u18" secondAttribute="centerX" id="cvs-Fn-y5Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XSj-ff-3uF" secondAttribute="trailing" id="fpY-Q7-KCz"/>
                             <constraint firstItem="XSj-ff-3uF" firstAttribute="leading" secondItem="WV9-nD-u18" secondAttribute="leadingMargin" id="gA4-5k-iv2"/>
+                            <constraint firstItem="XSj-ff-3uF" firstAttribute="top" secondItem="WDe-hw-VcL" secondAttribute="bottom" constant="8" id="lWQ-et-tAJ"/>
+                            <constraint firstItem="WDe-hw-VcL" firstAttribute="leading" secondItem="WV9-nD-u18" secondAttribute="leadingMargin" id="nIU-Ec-NMn"/>
                             <constraint firstItem="SIH-Zx-WU3" firstAttribute="trailing" secondItem="WV9-nD-u18" secondAttribute="trailingMargin" id="pHN-cF-8rh"/>
                             <constraint firstItem="MWc-Eb-DkH" firstAttribute="trailing" secondItem="WV9-nD-u18" secondAttribute="trailingMargin" id="peg-gL-2Z9"/>
                             <constraint firstItem="dlo-V4-FzV" firstAttribute="top" secondItem="rBs-d6-P7i" secondAttribute="bottom" constant="20" id="t0z-P3-ExZ"/>
                             <constraint firstItem="MWc-Eb-DkH" firstAttribute="top" secondItem="XSj-ff-3uF" secondAttribute="bottom" constant="20" id="zVZ-An-kOX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Sport videos" id="7Cl-1n-40u">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="d5R-L7-YaK">
-                            <connections>
-                                <action selector="cancel:" destination="8JD-cF-E0x" id="FKQ-i9-woU"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Sport videos" id="7Cl-1n-40u"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="activityIndicator" destination="rBs-d6-P7i" id="aVc-gf-p1a"/>
                         <segue destination="32c-uJ-mWC" kind="show" identifier="toVideoPlaylist" id="Koq-72-f9N"/>
@@ -231,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rok-PG-JkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="2334.7826086956525"/>
+            <point key="canvasLocation" x="3633" y="2336"/>
         </scene>
         <!--Video Playlist Table View Controller-->
         <scene sceneID="xlm-Z2-cie">
@@ -246,7 +250,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="197"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPe-Ov-aLa" id="Ook-Tl-DBG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="196.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jba-r6-Pkd">
@@ -296,7 +300,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnG-GI-Omt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992.8" y="2334.7826086956525"/>
+            <point key="canvasLocation" x="4657" y="2336"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="4wD-Qz-rzC">
@@ -342,7 +346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtt-oi-hIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3174" y="2335"/>
+            <point key="canvasLocation" x="5678" y="2336"/>
         </scene>
         <!--Health Calculator-->
         <scene sceneID="tne-QT-ifu">
@@ -410,7 +414,7 @@
                                         <rect key="frame" x="0.0" y="198" width="303" height="30"/>
                                         <state key="normal" title="Calculate"/>
                                         <connections>
-                                            <segue destination="5wC-ZS-VoL" kind="show" id="zn0-u7-Bav"/>
+                                            <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e2W-oM-HNg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -428,7 +432,7 @@
                                     <segment title="Female"/>
                                 </segments>
                             </segmentedControl>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ze6-wg-8Z8">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="an5-hd-1fp">
                                 <rect key="frame" x="177" y="639" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -436,33 +440,27 @@
                         <constraints>
                             <constraint firstItem="Bnf-uy-wo7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Arh-IE-qpE"/>
                             <constraint firstItem="Bnf-uy-wo7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="EjZ-5A-kbM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ze6-wg-8Z8" secondAttribute="trailing" constant="162" id="Iym-f3-CjK"/>
-                            <constraint firstItem="ze6-wg-8Z8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kqd-XZ-w8R"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ze6-wg-8Z8" secondAttribute="bottom" constant="8" id="L1m-4a-iej"/>
                             <constraint firstItem="1DS-ao-aI6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="NCO-eC-neq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="an5-hd-1fp" secondAttribute="bottom" constant="8" id="Pe2-XM-yGI"/>
                             <constraint firstItem="Bnf-uy-wo7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="72" id="YN2-5o-c4e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1DS-ao-aI6" secondAttribute="trailing" constant="20" id="f2g-1l-IzI"/>
                             <constraint firstItem="1DS-ao-aI6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="280" id="ma8-nE-KgF"/>
                             <constraint firstItem="ygk-F9-UJq" firstAttribute="top" secondItem="Bnf-uy-wo7" secondAttribute="bottom" constant="8" id="odC-hE-LcT"/>
                             <constraint firstItem="ygk-F9-UJq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5" id="sJv-1z-oO6"/>
-                            <constraint firstItem="ze6-wg-8Z8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="161" id="sna-jP-3LW"/>
+                            <constraint firstItem="an5-hd-1fp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zgp-Ii-Tvp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Health Calculator" id="I5f-ar-0jh">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="yYI-Dd-ixr">
-                            <connections>
-                                <action selector="backButton:" destination="BYZ-38-t0r" id="L7Y-ps-N52"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationItem key="navigationItem" title="Health Calculator" id="I5f-ar-0jh"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="an5-hd-1fp" id="TGJ-vE-EOa"/>
                         <outlet property="ageLabel" destination="CZp-c6-fie" id="q8q-9y-2Ow"/>
                         <outlet property="ageSlider" destination="oLX-Fh-iWp" id="XIV-Ee-aVO"/>
                         <outlet property="calcBtn" destination="J7s-gt-0sE" id="Wah-RG-E8A"/>
                         <outlet property="genderSelected" destination="ygk-F9-UJq" id="tjo-Ag-ACG"/>
                         <outlet property="heightValue" destination="R3Y-f3-xEg" id="7W8-lm-hcl"/>
                         <outlet property="weightValue" destination="3xd-1J-EM4" id="Z5f-23-6hd"/>
+                        <segue destination="5wC-ZS-VoL" kind="show" identifier="toPersonalInfoView" id="uAT-dc-F1t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -481,42 +479,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
-                            <userLayoutGuide location="16" affinity="minX"/>
+                            <userLayoutGuide location="327" affinity="minX"/>
                         </userGuides>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="but-mZ-6zs">
-                                <rect key="frame" x="259" y="72" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="acR-Nr-iwu"/>
-                                    <constraint firstAttribute="height" constant="100" id="cjY-0J-NvU"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjP-0L-Cee">
-                                <rect key="frame" x="15" y="180" width="345" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body mass index (BMI): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quJ-Ms-xal">
-                                <rect key="frame" x="15" y="215.5" width="345" height="20"/>
+                                <rect key="frame" x="16" y="72" width="343" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Risk factor: " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vac-HO-whe">
-                                <rect key="frame" x="15" y="250.5" width="345" height="20.5"/>
+                                <rect key="frame" x="16" y="100" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body condition: " lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmU-HU-P4R">
-                                <rect key="frame" x="15" y="286" width="345" height="20.5"/>
+                                <rect key="frame" x="16" y="128.5" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoS-Wl-LLj">
-                                <rect key="frame" x="15" y="321.5" width="345" height="41"/>
+                                <rect key="frame" x="16" y="157" width="343" height="41"/>
                                 <string key="text">Based on your parameters, your
 ideal weight is:</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -526,37 +511,24 @@ ideal weight is:</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Vac-HO-whe" secondAttribute="trailing" constant="15" id="7hc-E6-1YK"/>
-                            <constraint firstItem="JoS-Wl-LLj" firstAttribute="top" secondItem="KmU-HU-P4R" secondAttribute="bottom" constant="15" id="80g-Tb-Pq9"/>
-                            <constraint firstItem="but-mZ-6zs" firstAttribute="trailing" secondItem="AUK-2k-UOS" secondAttribute="trailingMargin" id="GcU-Nj-ZKS"/>
-                            <constraint firstItem="Vac-HO-whe" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" constant="15" id="HoB-qv-eYI"/>
-                            <constraint firstItem="rjP-0L-Cee" firstAttribute="top" secondItem="but-mZ-6zs" secondAttribute="bottom" constant="8" id="IN3-iz-Zj6"/>
-                            <constraint firstAttribute="trailing" secondItem="KmU-HU-P4R" secondAttribute="trailing" constant="15" id="PI7-ML-tNe"/>
-                            <constraint firstItem="JoS-Wl-LLj" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" constant="15" id="Q8Q-lA-VcI"/>
-                            <constraint firstItem="but-mZ-6zs" firstAttribute="top" secondItem="eds-PI-VJh" secondAttribute="bottom" constant="8" id="Vn9-3k-hOC"/>
-                            <constraint firstItem="KmU-HU-P4R" firstAttribute="top" secondItem="Vac-HO-whe" secondAttribute="bottom" constant="15" id="WBc-Aa-Uxl"/>
-                            <constraint firstItem="rjP-0L-Cee" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" constant="15" id="X4T-Fn-P2m"/>
-                            <constraint firstItem="Vac-HO-whe" firstAttribute="top" secondItem="quJ-Ms-xal" secondAttribute="bottom" constant="15" id="XYl-Ei-qAr"/>
-                            <constraint firstAttribute="trailing" secondItem="rjP-0L-Cee" secondAttribute="trailing" constant="15" id="Y2S-FW-La5"/>
-                            <constraint firstItem="quJ-Ms-xal" firstAttribute="top" secondItem="rjP-0L-Cee" secondAttribute="bottom" constant="15" id="YZS-yM-gvy"/>
-                            <constraint firstItem="quJ-Ms-xal" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" constant="15" id="Ynl-Hm-r2o"/>
-                            <constraint firstAttribute="trailing" secondItem="quJ-Ms-xal" secondAttribute="trailing" constant="15" id="bxo-j4-8K4"/>
-                            <constraint firstItem="KmU-HU-P4R" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leading" constant="15" id="gNj-Mh-05J"/>
-                            <constraint firstAttribute="trailing" secondItem="JoS-Wl-LLj" secondAttribute="trailing" constant="15" id="zbW-KM-krX"/>
+                            <constraint firstItem="KmU-HU-P4R" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leadingMargin" id="2o5-cL-63N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JoS-Wl-LLj" secondAttribute="trailing" id="5q1-BK-4yb"/>
+                            <constraint firstItem="quJ-Ms-xal" firstAttribute="top" secondItem="eds-PI-VJh" secondAttribute="bottom" constant="8" id="EAc-vB-G5u"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KmU-HU-P4R" secondAttribute="trailing" id="Fsy-xN-t79"/>
+                            <constraint firstItem="JoS-Wl-LLj" firstAttribute="top" secondItem="KmU-HU-P4R" secondAttribute="bottom" constant="8" id="LyX-p4-ciu"/>
+                            <constraint firstItem="Vac-HO-whe" firstAttribute="top" secondItem="quJ-Ms-xal" secondAttribute="bottom" constant="8" id="VA0-Ow-aAP"/>
+                            <constraint firstItem="JoS-Wl-LLj" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leadingMargin" id="Wc4-eH-xfy"/>
+                            <constraint firstItem="KmU-HU-P4R" firstAttribute="top" secondItem="Vac-HO-whe" secondAttribute="bottom" constant="8" id="Zod-kG-Jtk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="quJ-Ms-xal" secondAttribute="trailing" id="ezm-aK-8VA"/>
+                            <constraint firstItem="quJ-Ms-xal" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leadingMargin" id="hx4-3R-nRy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vac-HO-whe" secondAttribute="trailing" id="rfg-Ss-aaN"/>
+                            <constraint firstItem="Vac-HO-whe" firstAttribute="leading" secondItem="AUK-2k-UOS" secondAttribute="leadingMargin" id="sWU-pg-4Xq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Your personal information" id="4m7-4m-jZk">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="nXa-wT-XBB">
-                            <connections>
-                                <action selector="cancel:" destination="5wC-ZS-VoL" id="Hcm-ke-GaW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Your personal information" id="4m7-4m-jZk"/>
                     <connections>
                         <outlet property="BMILabel" destination="quJ-Ms-xal" id="ut0-Wm-83f"/>
-                        <outlet property="ageLabel" destination="rjP-0L-Cee" id="rx4-Nv-25U"/>
                         <outlet property="bodyConditionLabel" destination="KmU-HU-P4R" id="qQK-r4-pGE"/>
-                        <outlet property="genderImage" destination="but-mZ-6zs" id="eca-VB-jSd"/>
                         <outlet property="idealWeightLabel" destination="JoS-Wl-LLj" id="s1w-ws-aMc"/>
                         <outlet property="riskFactorLabel" destination="Vac-HO-whe" id="v1Y-eg-ao0"/>
                     </connections>
@@ -564,24 +536,6 @@ ideal weight is:</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oo5-bS-b4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4657" y="-99"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="jzI-NG-oqM">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DAQ-MP-F5N" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n7y-3G-Ubv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IHv-B9-8b6"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R0u-Qr-oGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2382" y="-99"/>
         </scene>
         <!--Search recipes-->
         <scene sceneID="f3K-x6-zxS">
@@ -592,23 +546,23 @@ ideal weight is:</string>
                         <viewControllerLayoutGuide type="bottom" id="sxg-ql-MCQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ced-TO-5hi">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="best-food" translatesAutoresizingMaskIntoConstraints="NO" id="035-LH-T6J">
-                                <rect key="frame" x="12" y="0.0" width="351" height="128"/>
+                                <rect key="frame" x="12" y="64" width="351" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="2XI-gG-y0x"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum calories per recipe:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiq-Uh-zQr">
-                                <rect key="frame" x="12" y="154" width="225" height="21"/>
+                                <rect key="frame" x="12" y="218" width="225" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="0.0" maxValue="3000" translatesAutoresizingMaskIntoConstraints="NO" id="ZLh-Wz-Blb">
-                                <rect key="frame" x="10" y="183" width="355" height="31"/>
+                                <rect key="frame" x="10" y="247" width="355" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.57159991588436698" green="1" blue="0.36711981830480478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="maximumTrackTintColor" red="1" green="0.45009477035953527" blue="0.45228900849701936" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="thumbTintColor" red="0.73597553448873265" green="0.93104941121587226" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -617,7 +571,7 @@ ideal weight is:</string>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwD-Cb-6LG">
-                                <rect key="frame" x="245" y="154" width="50" height="21"/>
+                                <rect key="frame" x="245" y="218" width="50" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="36z-II-NdW"/>
                                 </constraints>
@@ -626,13 +580,13 @@ ideal weight is:</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your diet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMa-j7-Lzq">
-                                <rect key="frame" x="16" y="219" width="343" height="21"/>
+                                <rect key="frame" x="16" y="283" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUf-XM-ppD" customClass="dietButtonView" customModule="KnowYourWeight">
-                                <rect key="frame" x="16" y="248" width="343" height="75"/>
+                                <rect key="frame" x="16" y="312" width="343" height="75"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food-pyramid1" highlightedImage="banana" translatesAutoresizingMaskIntoConstraints="NO" id="ZGy-hm-9UO">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="75"/>
@@ -663,7 +617,7 @@ ideal weight is:</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gs-JZ-XhI" customClass="dietButtonView" customModule="KnowYourWeight" customModuleProvider="target">
-                                <rect key="frame" x="16" y="331" width="343" height="75"/>
+                                <rect key="frame" x="16" y="395" width="343" height="75"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food-pyramid2" translatesAutoresizingMaskIntoConstraints="NO" id="rYQ-jh-wJo">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="75"/>
@@ -699,7 +653,7 @@ ideal weight is:</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-MH-XrQ" customClass="dietButtonView" customModule="KnowYourWeight" customModuleProvider="target">
-                                <rect key="frame" x="16" y="414" width="343" height="75"/>
+                                <rect key="frame" x="16" y="478" width="343" height="75"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food-pyramid3" translatesAutoresizingMaskIntoConstraints="NO" id="yGT-ZK-EeZ">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="75"/>
@@ -735,7 +689,7 @@ ideal weight is:</string>
                                 </constraints>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="R8Q-Ct-wwu">
-                                <rect key="frame" x="16" y="519" width="242" height="29"/>
+                                <rect key="frame" x="16" y="583" width="242" height="29"/>
                                 <segments>
                                     <segment title="Normal"/>
                                     <segment title="Vegan"/>
@@ -744,14 +698,14 @@ ideal weight is:</string>
                                 <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZy-R4-Xn8">
-                                <rect key="frame" x="278" y="518" width="48" height="30"/>
+                                <rect key="frame" x="278" y="582" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="searchBtnPressed:" destination="m7a-5r-jTv" eventType="touchUpInside" id="2C7-Ti-855"/>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="X03-xx-Fk8">
-                                <rect key="frame" x="177.5" y="573" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="637" width="20" height="20"/>
                                 <color key="color" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -790,17 +744,13 @@ ideal weight is:</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search recipes" id="ejU-Up-aMp">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="pbC-jU-tXQ">
-                            <connections>
-                                <action selector="backButton:" destination="m7a-5r-jTv" id="jb6-cf-6Af"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="X4g-Mm-SMC">
                             <connections>
                                 <action selector="goToSavedRecipesList:" destination="m7a-5r-jTv" id="Fm5-WA-Mh5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="activityIndicator" destination="X03-xx-Fk8" id="Azj-zk-lFl"/>
                         <outlet property="balancedDietButtonView" destination="ZUf-XM-ppD" id="QCE-TX-J3H"/>
@@ -815,14 +765,14 @@ ideal weight is:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xs3-b2-TrN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3633" y="720"/>
+            <point key="canvasLocation" x="3633" y="752"/>
         </scene>
         <!--Recipe list-->
         <scene sceneID="bGg-SJ-Hxf">
             <objects>
                 <tableViewController id="1Iu-DT-h7u" customClass="RecipeListTableViewController" customModule="KnowYourWeight" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" sectionHeaderHeight="28" sectionFooterHeight="28" id="1a4-rM-pzO">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -830,7 +780,7 @@ ideal weight is:</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="geh-qR-OBg" id="0kH-Wz-D09">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="149"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EV6-Gq-28k">
@@ -872,7 +822,7 @@ ideal weight is:</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oqt-rx-5Vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4657" y="719"/>
+            <point key="canvasLocation" x="4657" y="752"/>
         </scene>
         <!--Recipe-->
         <scene sceneID="i82-jr-9iT">
@@ -883,17 +833,17 @@ ideal weight is:</string>
                         <viewControllerLayoutGuide type="bottom" id="jvE-m9-qae"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nLc-lz-uRc">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H8E-I2-Tle">
-                                <rect key="frame" x="16" y="0.0" width="343" height="128"/>
+                                <rect key="frame" x="16" y="64" width="343" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="2nx-Uo-xAg"/>
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYA-dH-OI0">
-                                <rect key="frame" x="16" y="136" width="343" height="423"/>
+                                <rect key="frame" x="16" y="200" width="343" height="423"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0e-ct-cq8">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="0.0"/>
@@ -979,36 +929,14 @@ ideal weight is:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lcy-bk-veE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5630" y="718"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="vbO-8v-9iY">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ULY-uU-VB6" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="QZB-SA-dUI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="0DN-Ma-3oZ">
-                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="m7a-5r-jTv" kind="relationship" relationship="rootViewController" id="3W2-0l-LtX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dyy-Kr-aw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2382" y="718"/>
+            <point key="canvasLocation" x="5678" y="752"/>
         </scene>
         <!--Saved recipes-->
         <scene sceneID="GZz-9h-0Xr">
             <objects>
                 <tableViewController id="MkY-Jt-cZZ" customClass="SavedRecipeListTableViewController" customModule="KnowYourWeight" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" sectionHeaderHeight="28" sectionFooterHeight="28" id="b6u-eV-rlG">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1016,7 +944,7 @@ ideal weight is:</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="REs-gN-UmV" id="Q0d-ha-J7d">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="149"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6y-9N-XhN">
@@ -1072,30 +1000,30 @@ ideal weight is:</string>
                         <viewControllerLayoutGuide type="bottom" id="u4l-F2-Us6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="y9H-rm-Aoq">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7tf-JM-elm">
-                                <rect key="frame" x="16" y="0.0" width="343" height="128"/>
+                                <rect key="frame" x="16" y="64" width="343" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="y9n-Fv-1PP"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyf-aD-7Rt">
-                                <rect key="frame" x="16" y="136" width="343" height="20"/>
+                                <rect key="frame" x="16" y="200" width="343" height="20"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyI-70-JOB">
-                                <rect key="frame" x="132.5" y="523" width="109" height="30"/>
+                                <rect key="frame" x="133" y="587" width="109" height="30"/>
                                 <state key="normal" title="Go to full recipe"/>
                                 <connections>
                                     <action selector="openSourceURL:" destination="baG-nz-bnT" eventType="touchUpInside" id="lSn-Kn-6re"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTp-0H-DX3">
-                                <rect key="frame" x="16" y="164" width="343" height="21"/>
+                                <rect key="frame" x="16" y="228" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1127,22 +1055,22 @@ ideal weight is:</string>
             <point key="canvasLocation" x="4657" y="1577"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="o5T-R1-RNz">
+        <scene sceneID="uqB-zs-G5o">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8LD-ag-1TW" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mz2-rm-w6h" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kvE-tw-Op8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tEz-Ho-FoE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8JD-cF-E0x" kind="relationship" relationship="rootViewController" id="AJD-Yw-5bj"/>
+                        <segue destination="Ue3-S2-HX8" kind="relationship" relationship="rootViewController" id="zLe-ph-m0o"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tle-gw-Ogq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ySN-ID-Cdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="1523.3883058470765"/>
+            <point key="canvasLocation" x="852" y="752.47376311844084"/>
         </scene>
     </scenes>
     <resources>
