@@ -25,8 +25,6 @@ class SavedRecipeViewController: UIViewController {
   @IBOutlet weak var ingredients: UILabel!
   
   
-  
-  
   //MARK: Methods
   override func viewDidLoad() {
     super.viewDidLoad()

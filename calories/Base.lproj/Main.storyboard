@@ -972,10 +972,11 @@ ideal weight is:</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Saved recipes" id="u53-3s-tVl">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="jjP-um-lL6">
+                        <barButtonItem key="rightBarButtonItem" id="jjP-um-lL6">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fxt-UR-1CJ">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Clear list"/>
                                 <connections>
                                     <action selector="deleteAllRecordsFromCoreData:" destination="MkY-Jt-cZZ" eventType="touchUpInside" id="g3I-f6-BVp"/>

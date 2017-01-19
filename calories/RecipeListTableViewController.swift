@@ -10,9 +10,18 @@ import UIKit
 import SwiftyJSON
 import Foundation
 import Alamofire
-import AsyncDisplayKit
+
 
 class RecipeListTableViewController: UITableViewController {
+  
+  
+  // MARK: PROPERTIES
+  
+  
+  var JSONData: JSON?
+  var recipeArray = [Recipe]()
+  var selectedRecipeIndex: Int?
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -36,15 +45,9 @@ class RecipeListTableViewController: UITableViewController {
       recipeArray.append(localRecipe)
     }
   }
+
   
-  // MARK: PROPERTIES
   
-  
-  var JSONData: JSON?
-  var recipeArray = [Recipe]()
-  var selectedRecipeIndex: Int?
-  var imgChache: NSMutableDictionary = NSMutableDictionary()
-  var textChache: NSMutableDictionary = NSMutableDictionary()
   // MARK: - Table view data source
   
   
@@ -58,18 +61,7 @@ class RecipeListTableViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as! recipeListCell
     
-    // if image for IndexPath in chache load image from chache
-//    if imgChache.allKeys.contains(where: {$0 as! Int == indexPath.row}){
-//      DispatchQueue.main.async {
-//        cell.recipeImage.image = self.imgChache.value(forKey: String(indexPath.row)) as! UIImage?
-//        
-//        if let labelTuple = self.textChache.value(forKey: String(indexPath.row)) as? (String?, String?){
-//          cell.recipeLabel.text = labelTuple.0
-//          cell.contentProviderLabel.text = labelTuple.1
-//        }
-//      }
-//    }
-    
+
     // if IndexPath key is not present in chache get UIImage from Data
     DispatchQueue.global().async {
       let imageData = try? Data(contentsOf: self.recipeArray[indexPath.row].image)
@@ -78,12 +70,7 @@ class RecipeListTableViewController: UITableViewController {
           cell.recipeImage.image = imageFromData
           cell.recipeLabel.text = self.recipeArray[indexPath.row].label
           cell.contentProviderLabel.text = self.recipeArray[indexPath.row].source
-          // add image to chache
-          self.imgChache.setObject(imageFromData, forKey: indexPath.row as NSCopying)
-          
-          let recipeLabel = cell.recipeLabel.text
-          let contentProviderLabel = cell.contentProviderLabel.text
-          self.textChache.setObject((recipeLabel, contentProviderLabel), forKey: indexPath.row as NSCopying)
+
           
         }
       }

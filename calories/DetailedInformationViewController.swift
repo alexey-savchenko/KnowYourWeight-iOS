@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Alamofire
 import SwiftyJSON
 
 class DetailedViewController: UIViewController {
@@ -19,23 +18,15 @@ class DetailedViewController: UIViewController {
   @IBOutlet weak var idealWeightLabel: UILabel!
   
   
-  
-  
   var jsonFromRequest: JSON? = nil
   
-  
-  
+
   override func viewDidLoad() {
     
     super.viewDidLoad()
     
     print(jsonFromRequest.debugDescription)
-    
-
-
-
     self.configureView(json: jsonFromRequest!)
-    
   }
   
   
