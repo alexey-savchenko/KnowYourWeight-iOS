@@ -15,7 +15,10 @@ class MainMenuViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the 
+  }
+  override func viewDidAppear(_ animated: Bool) {
+    self.navigationController?.setNavigationBarHidden(true, animated: true)
   }
   
   override func didReceiveMemoryWarning() {
